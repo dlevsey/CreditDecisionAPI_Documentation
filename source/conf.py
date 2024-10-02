@@ -122,7 +122,8 @@ extensions = [
     'sphinx_togglebutton',
     'sphinx_tabs.tabs',
     'sphinx_design',
-    'sphinx_tippy'
+    'sphinx_tippy',
+    'sphinx_search.extension'
 ]
 
 todo_include_todos = True
@@ -284,6 +285,8 @@ myst_enable_extensions = [
 
 
 ]
+
+
 
 
 html_theme_options = {
