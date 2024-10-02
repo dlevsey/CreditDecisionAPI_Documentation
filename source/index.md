@@ -10,13 +10,14 @@ This API automates the decision-making process for credit approval based on cust
 
 
 
+
 ```{toctree}
 
 
 
 :maxdepth: 0
 
-
+Authentication.md
 Credit_Decision.md
 
 

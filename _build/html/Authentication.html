@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Quick Start - Programmatically &#8212; CreditDecisionAPI 1 documentation</title>
+    <title>Authentication &#8212; CreditDecisionAPI 1 documentation</title>
   
   
   
@@ -73,6 +73,8 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'Authentication';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Credit Decision" href="Credit_Decision.html" />
+    <link rel="prev" title="Credit Decision API Documentation" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -135,8 +137,6 @@
       
       
       
-        
-      
       <div class="bd-sidebar-primary bd-sidebar">
         
 
@@ -182,7 +182,8 @@
  </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Authentication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Credit_Decision.html">Credit Decision</a></li>
 </ul>
 
@@ -238,7 +239,7 @@
       
       
       
-      <li><a href="_sources/Authentication.rst" target="_blank"
+      <li><a href="_sources/Authentication.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -248,7 +249,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.rst</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -322,7 +323,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Quick Start - Programmatically</h1>
+    <h1>Authentication</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -332,17 +333,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Quick Start - Programmatically</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start-postman">Quick Start - Postman</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-an-access-token-in-postman">Requesting an Access Token in Postman</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-an-access-token-in-postman-bearer-token">Requesting an Access Token in Postman - Bearer Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-an-access-token-in-postman-oauth-2-0">Requesting an Access Token in Postman - OAuth 2.0</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request-with-access-token">Example Request With Access Token</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#servers">Servers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication-examples">Authentication Examples</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solo-header-requirements">SOLO Header Requirements</a></li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -353,509 +346,78 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p id="authentication"># Authentication</p>
+  <p>.. _Authentication:</p>
+<section id="authentication">
+<h1>Authentication<a class="headerlink" href="#authentication" title="Link to this heading">#</a></h1>
 <p>The Credit Decision API uses API keys for authentication.</p>
 <ul class="simple">
 <li><p>API keys are required for every endpoint.</p></li>
-<li><p>API keys are passed in the <cite>Authorization</cite> header as a Bearer token.</p></li>
+<li><p>API keys are passed in the <code class="docutils literal notranslate"><span class="pre">Authorization</span></code> header as a Bearer token.</p></li>
 </ul>
-<p>## Servers</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Authorization:<span class="w"> </span>Bearer<span class="w"> </span><span class="o">{</span>your_api_key<span class="o">}</span>
+</pre></div>
+</div>
+<section id="servers">
+<h2>Servers<a class="headerlink" href="#servers" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p><strong>Production Server:</strong> <cite>https://api.fintehcbank.com/v1</cite></p></li>
-<li><p><strong>Sandbox Server:</strong> <cite>https://sandboxapi.transfersolo.com</cite></p></li>
-<li><p><strong>Endpoint for Access Token:</strong> <cite>https://sandboxapi.transfersolo.com/connect/token</cite></p></li>
-<li><p><strong>Base URL:</strong> <cite>https://sandboxapi.transfersolo.com/api/v1/</cite></p></li>
-<li><p><strong>Endpoint Access Example:</strong> <cite>https://sandboxapi.transfersolo.com/api/v1/Dividend/GetList?customerIssuerId=1127</cite></p></li>
+<li><p><strong>Production Server:</strong> <code class="docutils literal notranslate"><span class="pre">https://api.fintehcbank.com/v1</span></code></p></li>
+<li><p><strong>Sandbox Server:</strong> <code class="docutils literal notranslate"><span class="pre">https://sandboxapi.fintechbank.com/v1</span></code></p></li>
 </ul>
-<section id="quick-start-programmatically">
-<h1>Quick Start - Programmatically<a class="headerlink" href="#quick-start-programmatically" title="Link to this heading">#</a></h1>
+</section>
+<section id="authentication-examples">
+<h2>Authentication Examples<a class="headerlink" href="#authentication-examples" title="Link to this heading">#</a></h2>
 <p>See below for how authentication should work in different languages.</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">C#</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">React</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">Python</button><button aria-controls="panel-0-0-3" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-3" name="0-3" role="tab" tabindex="-1">JSON</button><button aria-controls="panel-0-0-4" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-4" name="0-4" role="tab" tabindex="-1">Java</button><button aria-controls="panel-0-0-5" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-5" name="0-5" role="tab" tabindex="-1">Go</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">System.Collections.Generic</span><span class="p">;</span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">C#</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">Python</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">JavaScript</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Net.Http</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">System.Net.Http.Headers</span><span class="p">;</span>
-<span class="k">using</span><span class="w"> </span><span class="nn">System.Text.Json</span><span class="p">;</span>
 <span class="k">using</span><span class="w"> </span><span class="nn">System.Threading.Tasks</span><span class="p">;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">SoloApiExamples</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
 <span class="p">{</span>
-<span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">TokenRetrieval</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
 <span class="w">    </span><span class="p">{</span>
-<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="n">Task</span><span class="o">&lt;</span><span class="kt">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetAuthTokenAsync</span><span class="p">()</span>
-<span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">clientId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">&quot;SOLO_CLIENT_ID&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">clientSecret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Environment</span><span class="p">.</span><span class="n">GetEnvironmentVariable</span><span class="p">(</span><span class="s">&quot;SOLO_CLIENT_SECRET&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">tokenEndpoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;https://sandboxapi.transfersolo.com/connect/token&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">apiKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;your_api_key_here&quot;</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpClient</span><span class="p">();</span>
+<span class="w">        </span><span class="n">client</span><span class="p">.</span><span class="n">DefaultRequestHeaders</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">$&quot;Bearer {apiKey}&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">client</span><span class="p">.</span><span class="n">DefaultRequestHeaders</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/json&quot;</span><span class="p">);</span>
 
-<span class="w">            </span><span class="k">using</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">client</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HttpClient</span><span class="p">())</span>
-<span class="w">            </span><span class="p">{</span>
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">requestData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;grant_type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;client_credentials&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">                    </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;client_id&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">clientId</span><span class="w"> </span><span class="p">},</span>
-<span class="w">                    </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;client_secret&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">clientSecret</span><span class="w"> </span><span class="p">}</span>
-<span class="w">                </span><span class="p">};</span>
-
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">requestContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FormUrlEncodedContent</span><span class="p">(</span><span class="n">requestData</span><span class="p">);</span>
-<span class="w">                </span><span class="kt">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">PostAsync</span><span class="p">(</span><span class="n">tokenEndpoint</span><span class="p">,</span><span class="w"> </span><span class="n">requestContent</span><span class="p">);</span>
-
-<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">IsSuccessStatusCode</span><span class="p">)</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="kt">var</span><span class="w"> </span><span class="n">jsonContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">();</span>
-<span class="w">                    </span><span class="kt">var</span><span class="w"> </span><span class="n">tokenData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">JsonSerializer</span><span class="p">.</span><span class="n">Deserialize</span><span class="o">&lt;</span><span class="n">Dictionary</span><span class="o">&lt;</span><span class="kt">string</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="o">&gt;&gt;</span><span class="p">(</span><span class="n">jsonContent</span><span class="p">);</span>
-<span class="w">                    </span><span class="k">return</span><span class="w"> </span><span class="n">tokenData</span><span class="p">[</span><span class="s">&quot;access_token&quot;</span><span class="p">];</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">                </span><span class="k">else</span>
-<span class="w">                </span><span class="p">{</span>
-<span class="w">                    </span><span class="kt">var</span><span class="w"> </span><span class="n">errorContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">();</span>
-<span class="w">                    </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="nf">ApplicationException</span><span class="p">(</span><span class="s">$&quot;Failed to retrieve token: {errorContent}&quot;</span><span class="p">);</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">GetAsync</span><span class="p">(</span><span class="s">&quot;https://api.fintechbank.com/v1/credit-decision&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">var</span><span class="w"> </span><span class="n">content</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">Content</span><span class="p">.</span><span class="n">ReadAsStringAsync</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="n">content</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="k">import</span><span class="w"> </span><span class="nx">React</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">useEffect</span><span class="p">,</span><span class="w"> </span><span class="nx">useState</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;react&#39;</span><span class="p">;</span>
-<span class="k">import</span><span class="w"> </span><span class="nx">axios</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;axios&#39;</span><span class="p">;</span>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
 
-<span class="kd">const</span><span class="w"> </span><span class="nx">clientId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">SOLO_CLIENT_ID</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">clientSecret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">SOLO_CLIENT_SECRET</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">tokenEndpoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;https://sandboxapi.transfersolo.com/connect/token&#39;</span><span class="p">;</span>
-
-<span class="kd">const</span><span class="w"> </span><span class="nx">DividendList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">dividends</span><span class="p">,</span><span class="w"> </span><span class="nx">setDividends</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
-
-<span class="w">    </span><span class="c1">// Function to retrieve access token</span>
-<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">retrieveAccessToken</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">tokenData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">grant_type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;client_credentials&#39;</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">client_id</span><span class="o">:</span><span class="w"> </span><span class="nx">clientId</span><span class="p">,</span>
-<span class="w">            </span><span class="nx">client_secret</span><span class="o">:</span><span class="w"> </span><span class="nx">clientSecret</span>
-<span class="w">        </span><span class="p">};</span>
-
-<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="kd">const</span><span class="w"> </span><span class="nx">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">axios</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="nx">tokenEndpoint</span><span class="p">,</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">URLSearchParams</span><span class="p">(</span><span class="nx">tokenData</span><span class="p">),</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                    </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/x-www-form-urlencoded&#39;</span>
-<span class="w">                </span><span class="p">}</span>
-<span class="w">            </span><span class="p">});</span>
-
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">response</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">200</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">access_token</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Failed to retrieve token&#39;</span><span class="p">);</span>
-<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error retrieving access token:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">);</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">};</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">os</span>
-
-<span class="c1"># Set up environment variables for security</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SOLO_CLIENT_ID&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your_client_id_here&#39;</span>
-<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;SOLO_CLIENT_SECRET&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;your_client_secret_here&#39;</span>
-
-<span class="c1"># Retrieve credentials from environment variables</span>
-<span class="n">CLIENT_ID</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;SOLO_CLIENT_ID&#39;</span><span class="p">)</span>
-<span class="n">CLIENT_SECRET</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s1">&#39;SOLO_CLIENT_SECRET&#39;</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">get_oauth2_token</span><span class="p">():</span>
-    <span class="n">token_url</span> <span class="o">=</span> <span class="s2">&quot;https://sandboxapi.transfersolo.com/connect/token&quot;</span>
-    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-        <span class="s2">&quot;grant_type&quot;</span><span class="p">:</span> <span class="s2">&quot;client_credentials&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="n">CLIENT_ID</span><span class="p">,</span>
-        <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="n">CLIENT_SECRET</span>
-    <span class="p">}</span>
-
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="n">token_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-
-    <span class="c1"># Handle the response</span>
-    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Token retrieved successfully!&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()[</span><span class="s1">&#39;access_token&#39;</span><span class="p">]</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to retrieve token: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">None</span>
-
-<span class="k">def</span> <span class="nf">get_dividend_list</span><span class="p">(</span><span class="n">token</span><span class="p">):</span>
-    <span class="n">api_url</span> <span class="o">=</span> <span class="s2">&quot;https://sandboxapi.transfersolo.com/api/v1/Dividend/GetList?customerIssuerId=1127&quot;</span>
-    <span class="n">headers</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Authorization&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;Bearer </span><span class="si">{</span><span class="n">token</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">}</span>
-
-    <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">api_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Failed to retrieve dividend list: </span><span class="si">{</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="kc">None</span>
-
-<span class="n">token</span> <span class="o">=</span> <span class="n">get_oauth2_token</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">token</span><span class="p">:</span>
-    <span class="n">dividend_list</span> <span class="o">=</span> <span class="n">get_dividend_list</span><span class="p">(</span><span class="n">token</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">dividend_list</span><span class="p">)</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-0-0-3" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-3" name="0-3" role="tabpanel" tabindex="0"><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;tokenRetrieval&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Retrieve OAuth2 token.&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;steps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;step&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Set up environment variables.&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SOLO_CLIENT_ID and SOLO_CLIENT_SECRET&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;step&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Retrieve credentials.&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{Make sure to use appropriate reference to environment variable here}}&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{Make sure to use appropriate reference to environment variable here}}&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;step&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Define the OAuth2 token endpoint.&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;token_endpoint&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sandboxapi.transfersolo.com/connect/token&quot;</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;step&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Prepare the token request data.&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;request_data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;grant_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;client_credentials&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{client_id}}&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{client_secret}}&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="p">},</span>
-<span class="w">      </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;step&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Make a POST request to the token endpoint.&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;POST&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://sandboxapi.transfersolo.com/connect/token&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;body&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nt">&quot;grant_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;client_credentials&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;client_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{client_id}}&quot;</span><span class="p">,</span>
-<span class="w">          </span><span class="nt">&quot;client_secret&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{client_secret}}&quot;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">      </span><span class="p">}</span>
-<span class="w">    </span><span class="p">]</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;exampleRequestToDividendGetListWithToken&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example request to the Dividend and GetList endpoint using the retrieved token.&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;method&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{baseurl}}/api/v1/Dividend/GetList?customerIssuerId=1127&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;headers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">      </span><span class="nt">&quot;Authorization&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Bearer &lt;YOUR TOKEN&gt;&quot;</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">  </span><span class="p">},</span>
-<span class="w">  </span><span class="nt">&quot;note&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Remember to replace `&lt;YOUR TOKEN&gt;` with the actual token received from the token endpoint.&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-0-0-4" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-4" name="0-4" role="tabpanel" tabindex="0"><div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.BufferedReader</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.DataOutputStream</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.InputStreamReader</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.HttpURLConnection</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.net.URL</span><span class="p">;</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.stream.Collectors</span><span class="p">;</span>
-
-<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SoloAPIClient</span><span class="w"> </span><span class="p">{</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getToken</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">clientId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getenv</span><span class="p">(</span><span class="s">&quot;SOLO_CLIENT_ID&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">clientSecret</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">getenv</span><span class="p">(</span><span class="s">&quot;SOLO_CLIENT_SECRET&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">URL</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://sandboxapi.transfersolo.com/connect/token&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">HttpURLConnection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HttpURLConnection</span><span class="p">)</span><span class="w"> </span><span class="n">url</span><span class="p">.</span><span class="na">openConnection</span><span class="p">();</span>
-<span class="w">            </span><span class="n">conn</span><span class="p">.</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s">&quot;POST&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">conn</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">conn</span><span class="p">.</span><span class="na">setDoOutput</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">urlParameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;grant_type=client_credentials&amp;client_id=&quot;</span><span class="w"> </span><span class="o">+</span>
-<span class="w">                    </span><span class="n">clientId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&amp;client_secret=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">clientSecret</span><span class="p">;</span>
-<span class="w">            </span><span class="n">DataOutputStream</span><span class="w"> </span><span class="n">wr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DataOutputStream</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="na">getOutputStream</span><span class="p">());</span>
-<span class="w">            </span><span class="n">wr</span><span class="p">.</span><span class="na">writeBytes</span><span class="p">(</span><span class="n">urlParameters</span><span class="p">);</span>
-<span class="w">            </span><span class="n">wr</span><span class="p">.</span><span class="na">flush</span><span class="p">();</span>
-<span class="w">            </span><span class="n">wr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
-
-<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">responseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">();</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">responseCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HttpURLConnection</span><span class="p">.</span><span class="na">HTTP_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">()))</span>
-<span class="w">                        </span><span class="p">.</span><span class="na">lines</span><span class="p">().</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">joining</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">));</span>
-<span class="w">                </span><span class="c1">// Assuming the token is directly returned for simplicity; parse the response as needed.</span>
-<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="n">response</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Failed to retrieve token: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">responseCode</span><span class="p">);</span>
-<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w">            </span><span class="p">}</span>
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Exception occurred: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">getList</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">URL</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">URL</span><span class="p">(</span><span class="s">&quot;https://sandboxapi.transfersolo.com/api/v1/Dividend/GetList?customerIssuerId=1127&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">HttpURLConnection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HttpURLConnection</span><span class="p">)</span><span class="w"> </span><span class="n">url</span><span class="p">.</span><span class="na">openConnection</span><span class="p">();</span>
-<span class="w">            </span><span class="n">conn</span><span class="p">.</span><span class="na">setRequestMethod</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="n">conn</span><span class="p">.</span><span class="na">setRequestProperty</span><span class="p">(</span><span class="s">&quot;Authorization&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Bearer &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">token</span><span class="p">);</span>
-
-<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">responseCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">getResponseCode</span><span class="p">();</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;GET List Response Code : &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">responseCode</span><span class="p">);</span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">responseCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">HttpURLConnection</span><span class="p">.</span><span class="na">HTTP_OK</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">responseStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">conn</span><span class="p">.</span><span class="na">getInputStream</span><span class="p">()))</span>
-<span class="w">                        </span><span class="p">.</span><span class="na">lines</span><span class="p">().</span><span class="na">collect</span><span class="p">(</span><span class="n">Collectors</span><span class="p">.</span><span class="na">joining</span><span class="p">(</span><span class="s">&quot;\n&quot;</span><span class="p">));</span>
-<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">responseStr</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;GET request not worked&quot;</span><span class="p">);</span>
-<span class="w">            </span><span class="p">}</span>
-
-<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Exception occurred while making GET list request: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getToken</span><span class="p">();</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">token</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="n">getList</span><span class="p">(</span><span class="n">token</span><span class="p">);</span>
-<span class="w">        </span><span class="p">}</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-0-0-5" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-5" name="0-5" role="tabpanel" tabindex="0"><div class="highlight-go notranslate"><div class="highlight"><pre><span></span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
-
-<span class="kn">import</span><span class="w"> </span><span class="p">(</span>
-<span class="w">    </span><span class="s">&quot;bytes&quot;</span>
-<span class="w">    </span><span class="s">&quot;encoding/json&quot;</span>
-<span class="w">    </span><span class="s">&quot;fmt&quot;</span>
-<span class="w">    </span><span class="s">&quot;io/ioutil&quot;</span>
-<span class="w">    </span><span class="s">&quot;net/http&quot;</span>
-<span class="w">    </span><span class="s">&quot;os&quot;</span>
-<span class="p">)</span>
-
-<span class="kd">type</span><span class="w"> </span><span class="nx">OAuth2TokenResponse</span><span class="w"> </span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">AccessToken</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="s">`json:&quot;access_token&quot;`</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s1">&#39;your_api_key_here&#39;</span>
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Authorization&#39;</span><span class="p">:</span> <span class="sa">f</span><span class="s1">&#39;Bearer </span><span class="si">{</span><span class="n">api_key</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;Content-Type&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json&#39;</span>
 <span class="p">}</span>
 
-<span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">clientID</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Getenv</span><span class="p">(</span><span class="s">&quot;SOLO_CLIENT_ID&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="nx">clientSecret</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">os</span><span class="p">.</span><span class="nx">Getenv</span><span class="p">(</span><span class="s">&quot;SOLO_CLIENT_SECRET&quot;</span><span class="p">)</span>
-<span class="w">    </span><span class="nx">tokenEndpoint</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;https://sandboxapi.transfersolo.com/connect/token&quot;</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://api.fintechbank.com/v1/credit-decision&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">())</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kd">const</span><span class="w"> </span><span class="nx">fetch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;node-fetch&#39;</span><span class="p">);</span>
 
-<span class="w">    </span><span class="nx">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="nb">byte</span><span class="p">(</span><span class="s">`grant_type=client_credentials&amp;client_id=`</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">clientID</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">`&amp;client_secret=`</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">clientSecret</span><span class="p">)</span>
-<span class="w">    </span><span class="nx">req</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">NewRequest</span><span class="p">(</span><span class="s">&quot;POST&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tokenEndpoint</span><span class="p">,</span><span class="w"> </span><span class="nx">bytes</span><span class="p">.</span><span class="nx">NewBuffer</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Error creating request:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">apiKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;your_api_key_here&#39;</span><span class="p">;</span>
+
+<span class="nx">fetch</span><span class="p">(</span><span class="s1">&#39;https://api.fintechbank.com/v1/credit-decision&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">method</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;GET&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">headers</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s1">&#39;Authorization&#39;</span><span class="o">:</span><span class="w"> </span><span class="sb">`Bearer </span><span class="si">${</span><span class="nx">apiKey</span><span class="si">}</span><span class="sb">`</span><span class="p">,</span>
+<span class="w">        </span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;application/json&#39;</span>
 <span class="w">    </span><span class="p">}</span>
-
-<span class="w">    </span><span class="nx">req</span><span class="p">.</span><span class="nx">Header</span><span class="p">.</span><span class="nx">Set</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;application/x-www-form-urlencoded&quot;</span><span class="p">)</span>
-
-<span class="w">    </span><span class="nx">client</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">http</span><span class="p">.</span><span class="nx">Client</span><span class="p">{}</span>
-<span class="w">    </span><span class="nx">resp</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">client</span><span class="p">.</span><span class="nx">Do</span><span class="p">(</span><span class="nx">req</span><span class="p">)</span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Error sending request:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
-<span class="w">        </span><span class="k">return</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="w">    </span><span class="k">defer</span><span class="w"> </span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">.</span><span class="nx">Close</span><span class="p">()</span>
-
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">resp</span><span class="p">.</span><span class="nx">StatusCode</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nx">http</span><span class="p">.</span><span class="nx">StatusOK</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">tokenResponse</span><span class="w"> </span><span class="nx">OAuth2TokenResponse</span>
-<span class="w">        </span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">ioutil</span><span class="p">.</span><span class="nx">ReadAll</span><span class="p">(</span><span class="nx">resp</span><span class="p">.</span><span class="nx">Body</span><span class="p">)</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Error reading response body:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
-<span class="w">            </span><span class="k">return</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="nx">err</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nx">json</span><span class="p">.</span><span class="nx">Unmarshal</span><span class="p">(</span><span class="nx">body</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="nx">tokenResponse</span><span class="p">)</span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">err</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">nil</span><span class="w"> </span><span class="p">{</span>
-<span class="w">            </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Error unmarshalling response:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">)</span>
-<span class="w">            </span><span class="k">return</span>
-<span class="w">        </span><span class="p">}</span>
-
-<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Access Token:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">tokenResponse</span><span class="p">.</span><span class="nx">AccessToken</span><span class="p">)</span>
-<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Request failed with status:&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">resp</span><span class="p">.</span><span class="nx">Status</span><span class="p">)</span>
-<span class="w">    </span><span class="p">}</span>
-<span class="p">}</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">data</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">))</span>
+<span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">error</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">error</span><span class="p">));</span>
 </pre></div>
 </div>
 </div></div>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>If you encounter any issues, please <span class="xref std std-ref">let us know</span>.</p>
-</div>
 </section>
-<section id="quick-start-postman">
-<h1>Quick Start - Postman<a class="headerlink" href="#quick-start-postman" title="Link to this heading">#</a></h1>
-<p>You can also use the following steps to quickly get started with the API in Postman:</p>
-<ol class="arabic">
-<li><p>Create a new environment.</p></li>
-<li><p>Add the following variables to the environment:</p>
-<ul class="simple">
-<li><p><cite>baseurl</cite>: The base URL of the API.</p></li>
-<li><p><cite>clientId</cite>: Your client ID.</p></li>
-<li><p><cite>clientSecret</cite>: Your client secret.</p></li>
-<li><p><cite>access_token</cite>: Your access token.</p></li>
-</ul>
-</li>
-<li><p>Change the values for the variables to be the following:</p>
-<ul class="simple">
-<li><p><cite>baseurl</cite>: <cite>https://sandboxapi.transfersolo.com</cite>.</p></li>
-<li><p><cite>clientId</cite>: Your client ID.</p></li>
-<li><p><cite>clientSecret</cite>: Your client secret.</p></li>
-<li><p><cite>access_token</cite>: Your access token.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can obtain your access token by following the steps in the <a class="reference internal" href="#id1">Requesting an Access Token in Postman</a> section.</p>
-</div>
-</li>
-<li><p>Click “Save.”</p></li>
-<li><p>Change environment to the environment you just created.</p></li>
-<li><p>Create New Collection.</p></li>
-<li><p>Set up an Access Token in Postman.</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can obtain your access token by following the steps in either the <a class="reference internal" href="#requesting-an-access-token-in-postman-bearer-token">Requesting an Access Token in Postman - Bearer Token</a> section, or the <a class="reference internal" href="#requesting-an-access-token-in-postman-oauth2-0-token">Requesting an Access Token in Postman - OAuth2.0 Token</a> section.</p>
-</div>
-<ol class="arabic simple" start="8">
-<li><p>Click “Save.”</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You should now be authorized.</p>
-</div>
-</section>
-<section id="requesting-an-access-token-in-postman">
-<h1>Requesting an Access Token in Postman<a class="headerlink" href="#requesting-an-access-token-in-postman" title="Link to this heading">#</a></h1>
-<section id="requesting-an-access-token-in-postman-bearer-token">
-<span id="id1"></span><span id="id2"></span><h2>Requesting an Access Token in Postman - Bearer Token<a class="headerlink" href="#requesting-an-access-token-in-postman-bearer-token" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Create a New Request.</p></li>
-<li><p>Set the Request Method to POST.</p></li>
-<li><p>Set the Request URL to {{baseurl}}/connect/token.</p></li>
-<li><p>Click on the “Body” tab.</p></li>
-<li><p>Change the “Body” type to “x-www-form-urlencoded.”</p></li>
-<li><p>Add the following key/value pairs to the body:</p>
-<ul class="simple">
-<li><p><cite>grant_type</cite>: client_credentials.</p></li>
-<li><p><cite>client_id</cite>: {{clientId}}.</p></li>
-<li><p><cite>client_secret</cite>: {{clientSecret}}.</p></li>
-<li><p><cite>scope</cite>: access_token.</p></li>
-</ul>
-</li>
-</ol>
-<ol class="arabic simple" start="4">
-<li><p>Click on the “Authorization” tab.</p></li>
-<li><p>Select “Bearer Token” if you already have a token.</p></li>
-<li><p>Select “Save.”</p></li>
-<li><p>Select “Send.”</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You should now have an access token.</p>
-</div>
-</section>
-<section id="requesting-an-access-token-in-postman-oauth-2-0">
-<span id="requesting-an-access-token-in-postman-oauth2-0-token"></span><h2>Requesting an Access Token in Postman - OAuth 2.0<a class="headerlink" href="#requesting-an-access-token-in-postman-oauth-2-0" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Create a New Request.</p></li>
-<li><p>Set the Request Method to POST.</p></li>
-<li><p>Set the Request URL to {{base_url}}/connect/token.</p></li>
-<li><p>Click on the “Authorization” tab.</p></li>
-<li><p>Select “OAuth 2.0” if you already have a token.</p></li>
-<li><p>Check the following:</p>
-<ul class="simple">
-<li><p><cite>Add authorization data to:</cite> Request Headers.</p></li>
-<li><p><cite>Token:</cite>{{access_token}}.</p></li>
-<li><p><cite>Header Prefix:</cite> Bearer.</p></li>
-<li><p><cite>Grant Type:</cite> Client Credentials.</p></li>
-<li><p><cite>Access Token URL:</cite> {{baseurl}}/connect/token.</p></li>
-<li><p><cite>Client ID:</cite> {{clientId}}.</p></li>
-<li><p><cite>Client Secret:</cite> {{clientsecret}}.</p></li>
-<li><p><cite>Scope:</cite> access_token.</p></li>
-<li><p><cite>Client Authentication:</cite> Send as Basic Auth header.</p></li>
-</ul>
-</li>
-<li><p>Click “Get New Access Token.”</p></li>
-<li><p>Select “Proceed.”</p></li>
-<li><p>Change Token Name (if desired).</p></li>
-<li><p>Select “Use Token.”</p></li>
-<li><p>Select “Send.”</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You should now have an access token.</p>
-</div>
-</section>
-<section id="example-request-with-access-token">
-<h2>Example Request With Access Token<a class="headerlink" href="#example-request-with-access-token" title="Link to this heading">#</a></h2>
-<p>Once you have an <cite>access_token</cite>, you can use it to make authenticated requests to the API.</p>
-<p>Include it in the <cite>Authorization</cite> header as a Bearer token.</p>
-<ol class="arabic">
-<li><p>Create a New Request.</p></li>
-<li><p>Set Request Url to the endpoint you want to call.</p>
-<p>Example:</p>
-</li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>GET<span class="w"> </span><span class="o">{{</span>baseurl<span class="o">}}</span>/api/v1/Shareholder/Details
-</pre></div>
-</div>
-<ol class="arabic simple" start="3">
-<li><p>Set Request Method to correct method.</p></li>
-<li><p>Select the “Authorization” tab.</p></li>
-</ol>
-<blockquote>
-<div><ul class="simple">
-<li><p><cite>Type:</cite> Bearer Token.</p></li>
-<li><p><cite>Token:</cite> {{access_token}}.</p></li>
-</ul>
-</div></blockquote>
-<ol class="arabic" start="5">
-<li><p>Select the “Headers” tab, and add the following header:</p>
-<ul class="simple">
-<li><p><cite>Content-Type:</cite> application/json.</p></li>
-</ul>
-</li>
-<li><p>Select “Params” tab, and add any required parameters.</p>
-<p>Example:</p>
-</li>
-</ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>CustomerShareholderId:<span class="w"> </span><span class="m">102322</span>
-</pre></div>
-</div>
-<ol class="arabic simple" start="6">
-<li><p>Select “Save.”</p></li>
-<li><p>Select “Send.”</p></li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You can also copy the request url below and paste it into the request url field in Postman.</p>
-</div>
-<p>Request URL:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{{</span>baseurl<span class="o">}}</span>/api/v1/Shareholder/Details?CustomerShareholderId<span class="o">=</span><span class="m">102322</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="solo-header-requirements">
-<span id="id3"></span><h1>SOLO Header Requirements<a class="headerlink" href="#solo-header-requirements" title="Link to this heading">#</a></h1>
-<p>When making API requests, SOLO may require you to include additional headers:</p>
-<ul class="simple">
-<li><p><cite>Authorization</cite>: The access token. Required for all requests.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Typically, this is automatically populated by the API client.</p>
-</div>
-<ul class="simple">
-<li><p><cite>Content-Type</cite>: application/json. Required for POST and PUT requests.</p></li>
-</ul>
 </section>
 
 
@@ -869,6 +431,24 @@ document.write(`
                 <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Credit Decision API Documentation</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Credit_Decision.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Credit Decision</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -885,17 +465,9 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Quick Start - Programmatically</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#quick-start-postman">Quick Start - Postman</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-an-access-token-in-postman">Requesting an Access Token in Postman</a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-an-access-token-in-postman-bearer-token">Requesting an Access Token in Postman - Bearer Token</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#requesting-an-access-token-in-postman-oauth-2-0">Requesting an Access Token in Postman - OAuth 2.0</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request-with-access-token">Example Request With Access Token</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#servers">Servers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#authentication-examples">Authentication Examples</a></li>
 </ul>
-</li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#solo-header-requirements">SOLO Header Requirements</a></li>
-</ul>
-
   </nav></div>
 
 </div></div>

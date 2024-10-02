@@ -14,14 +14,19 @@ The Credit Decision API uses API keys for authentication.
 
 - API keys are passed in the `Authorization` header as a Bearer token.
 
+```bash
+
+
+
+```
+
 
 ## Servers
 
 
 - **Production Server:** `https://api.fintehcbank.com/v1`
 
-- **Sandbox Server:** `https://sandboxapi.transfersolo.com`
-
+- **Sandbox Server:** `https://sandboxapi.fintechbank.com/v1`
 
 
 
@@ -36,6 +41,8 @@ Quick Start - Programmatically
 
 
 See below for how authentication should work in different languages.
+
+
 
 
 
