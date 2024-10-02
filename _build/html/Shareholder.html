@@ -1,0 +1,686 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Shareholder &#8212; CreditDecisionAPI 1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css?v=7bc2f056" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css?v=37217874" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css?v=6227e517" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css?v=94669e23" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css?v=21a39f42" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css?v=a18b2449" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css?v=dbff53e4" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css?v=d7bf34ee" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/my_custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="_static/my_custom.css?v=0c271358" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=1e5e4989"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/hoverxref.js?v=c3a9726a"></script>
+    <script src="_static/js/tooltipster.bundle.min.js?v=18bf091b"></script>
+    <script src="_static/js/micromodal.min.js?v=04d6302d"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/tabs.js?v=3030b3cb"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Shareholder';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="_static/Sardine.png" class="logo__image only-light" alt="CreditDecisionAPI 1 documentation - Home"/>
+    <script>document.write(`<img src="_static/Sardine.png" class="logo__image only-dark" alt="CreditDecisionAPI 1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Credit_Decision.html">Credit Decision</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Shareholder.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Shareholder</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-shareholder-createorupdate"><span class="http-method post">POST</span> Shareholder/CreateOrUpdate</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#possible-actions">Possible Actions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-or-mailing-address-child-attributes">Primary (or Mailing) Address Child Attributes:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-shareholder-details"><span class="http-method get medium">GET</span> Shareholder/Details</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-shareholder-getholdingsummary"><span class="http-method get">GET</span> Shareholder/GetHoldingSummary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="shareholder">
+<h1>Shareholder<a class="headerlink" href="#shareholder" title="Link to this heading">#</a></h1>
+<p>Resource and endpoints for Shareholder related operations.</p>
+<section id="endpoints">
+<h2>Endpoints:<a class="headerlink" href="#endpoints" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="http-method post small">POST</span> <a class="reference internal" href="#post-shareholder-create-or-update"><span class="std std-ref">Shareholder/CreateOrUpdate</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method get small">GET</span> <a class="reference internal" href="#get-shareholder-details"><span class="std std-ref">Shareholder/Details</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method get small">GET</span> <a class="reference internal" href="#get-shareholder-holding-summary"><span class="std std-ref">Shareholder/GetHoldingSummary</span></a></p></li>
+</ul>
+</section>
+<section id="post-shareholder-createorupdate">
+<span id="post-shareholder-create-or-update"></span><h2><span class="http-method post">POST</span> Shareholder/CreateOrUpdate<a class="headerlink" href="#post-shareholder-createorupdate" title="Link to this heading">#</a></h2>
+<section id="possible-actions">
+<h3>Possible Actions:<a class="headerlink" href="#possible-actions" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Create a new Shareholder, or</p></li>
+<li><p>Update an existing Shareholder.</p></li>
+</ul>
+</section>
+<section id="request-body">
+<h3>Request Body:<a class="headerlink" href="#request-body" title="Link to this heading">#</a></h3>
+</section>
+<section id="primary-or-mailing-address-child-attributes">
+<h3>Primary (or Mailing) Address Child Attributes:<a class="headerlink" href="#primary-or-mailing-address-child-attributes" title="Link to this heading">#</a></h3>
+</section>
+<section id="example-request">
+<h3>Example Request:<a class="headerlink" href="#example-request" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;https://sandboxapi.transfersolo.com/api/v1/Shareholder/CreateOrUpdate&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Type: text/plain&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-raw<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;CreatedByEmail&quot;: &quot;john.dooe@test.org&quot;,</span>
+<span class="s1">    &quot;createdByFirstName&quot;: &quot;John&quot;,</span>
+<span class="s1">    &quot;createdByLastName&quot;: &quot;Do&quot;,</span>
+<span class="s1">    &quot;customerShareholderId&quot;: &quot;Shrhld-00001&quot;,</span>
+<span class="s1">    &quot;sortName&quot;: &quot;Sebto Kmarouaney&quot;,</span>
+<span class="s1">    &quot;name&quot;: &quot;Kmarouaney Sebto&quot;,</span>
+<span class="s1">    &quot;name2&quot;: &quot;Fara Hguessous&quot;,</span>
+<span class="s1">    &quot;name3&quot;: &quot;&quot;,</span>
+<span class="s1">    &quot;accountType&quot;: &quot;JointTenant&quot;,</span>
+<span class="s1">    &quot;primaryTaxId&quot;: &quot;333-22-1111&quot;,</span>
+<span class="s1">    &quot;primaryTaxIdType&quot;: &quot;SSN&quot;,</span>
+<span class="s1">    &quot;primaryPayeeName&quot;: &quot;Kmarouaney Sebto&quot;,</span>
+<span class="s1">    &quot;secondaryTaxId&quot;: &quot;111-22-3333&quot;,</span>
+<span class="s1">    &quot;secondaryTaxIdType&quot;: &quot;SSN&quot;,</span>
+<span class="s1">    &quot;secondaryPayeeName&quot;: &quot;Fara Hoguessous&quot;,</span>
+<span class="s1">    &quot;primaryAddress&quot;: {</span>
+<span class="s1">        &quot;address1&quot;: &quot;287 Maple Street&quot;,</span>
+<span class="s1">        &quot;address2&quot;: &quot;&quot;,</span>
+<span class="s1">        &quot;city&quot;: &quot;Aloha&quot;,</span>
+<span class="s1">        &quot;state&quot;: &quot;Oregon&quot;,</span>
+<span class="s1">        &quot;postalCode&quot;: &quot;97330&quot;,</span>
+<span class="s1">        &quot;country2Code&quot;: &quot;US&quot;,</span>
+<span class="s1">        &quot;email&quot;: &quot;fara.hoguessous@gmail.com&quot;,</span>
+<span class="s1">        &quot;phone&quot;: &quot;+1-369-644-7405&quot;,</span>
+<span class="s1">        &quot;secondaryPhone&quot;: &quot;+1-191-173-9126&quot;</span>
+<span class="s1">    },</span>
+<span class="s1">    &quot;mailingAddress&quot;: {</span>
+<span class="s1">        &quot;address1&quot;: &quot;24 Luradel Drive&quot;,</span>
+<span class="s1">        &quot;address2&quot;: &quot;&quot;,</span>
+<span class="s1">        &quot;city&quot;: &quot;Portland&quot;,</span>
+<span class="s1">        &quot;state&quot;: &quot;Oregon&quot;,</span>
+<span class="s1">        &quot;postalCode&quot;: &quot;97330&quot;,</span>
+<span class="s1">        &quot;country2Code&quot;: &quot;US&quot;,</span>
+<span class="s1">        &quot;email&quot;: &quot;kmarouaney.sebto@sample.net&quot;,</span>
+<span class="s1">        &quot;phone&quot;: &quot;+1-994-399-3071&quot;,</span>
+<span class="s1">        &quot;secondaryPhone&quot;: &quot;+1-437-394-2155&quot;</span>
+<span class="s1">    }</span>
+<span class="s1">}&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="response">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#response" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w"> </span><span class="nt">&quot;action&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Update&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;customerShareholderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shrhld-00001&quot;</span><span class="p">,</span>
+<span class="w"> </span><span class="nt">&quot;systemShareholderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">28599</span>
+<span class="w"> </span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="get-shareholder-details">
+<span id="id1"></span><h2><span class="http-method get medium">GET</span> Shareholder/Details<a class="headerlink" href="#get-shareholder-details" title="Link to this heading">#</a></h2>
+<section id="description">
+<h3>Description:<a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
+<p>Retrieves detailed information about specified Shareholder:</p>
+</section>
+<section id="query-parameters">
+<h3>Query Parameters:<a class="headerlink" href="#query-parameters" title="Link to this heading">#</a></h3>
+</section>
+<section id="id2">
+<h3>Example Request:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;https://sandboxapi.transfersolo.com/api/v1/Shareholder/Details?CustomerShareholderId=T5914714658&amp;SystemShareholderId=0&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;grant_type: client_credentials&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;client_id: {{clentId}}&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;client_secret: {{clientsecret}}&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Type: text/plain&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-urlencode<span class="w"> </span><span class="s1">&#39;grant_type=client_credentials&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-urlencode<span class="w"> </span><span class="s1">&#39;client_id={{clentId}}&#39;</span><span class="w"> </span><span class="se">\</span>
+--data-urlencode<span class="w"> </span><span class="s1">&#39;client_secret={{clientsecret}}&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;sortName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Thomas Morgan&quot;</span><span class="p">,</span>
+<span class="nt">&quot;customerShareholderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T5914714658&quot;</span><span class="p">,</span>
+<span class="nt">&quot;systemShareholderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">28596</span><span class="p">,</span>
+<span class="nt">&quot;displayShareholderId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;T5914714658&quot;</span><span class="p">,</span>
+<span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Morgan Thomas Leah Ramirez&quot;</span><span class="p">,</span>
+<span class="nt">&quot;fullPrimaryAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;944 Oak Drive\nMedford, Oregon 97330\nUnited States&quot;</span><span class="p">,</span>
+<span class="nt">&quot;primaryAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;944 Oak Drive&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Medford&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Oregon&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;postalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;97330&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;country2Code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;morgan.thomas@sample.net&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+1-205-491-7350&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;secondaryPhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+1-151-172-2162&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United States&quot;</span>
+<span class="p">},</span>
+<span class="nt">&quot;fullMailingAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;880 Pine Court\nEugene, Oregon 97330\nUnited States&quot;</span><span class="p">,</span>
+<span class="nt">&quot;mailingAddress&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;880 Pine Court&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Eugene&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Oregon&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;postalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;97330&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;country2Code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;US&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;morgan.thomas@sample.net&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+1-672-821-9614&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;secondaryPhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;+1-134-901-8681&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;United States&quot;</span>
+<span class="p">},</span>
+<span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Individual&quot;</span><span class="p">,</span>
+<span class="nt">&quot;primaryTaxId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;209566819&quot;</span><span class="p">,</span>
+<span class="nt">&quot;primaryTaxIdType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SIN&quot;</span><span class="p">,</span>
+<span class="nt">&quot;primaryPayeeName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Morgan Thomas&quot;</span><span class="p">,</span>
+<span class="nt">&quot;secondaryTaxId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="nt">&quot;secondaryTaxIdType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SSN&quot;</span><span class="p">,</span>
+<span class="nt">&quot;secondaryPayeeName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Leah Ramirez&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="get-shareholder-getholdingsummary">
+<span id="get-shareholder-holding-summary"></span><h2><span class="http-method get">GET</span> Shareholder/GetHoldingSummary<a class="headerlink" href="#get-shareholder-getholdingsummary" title="Link to this heading">#</a></h2>
+<section id="id4">
+<h3>Description:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Retrieves summary of holdings for specified Shareholder.</p>
+</section>
+<section id="id5">
+<h3>Query Parameters:<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+</section>
+<section id="id6">
+<h3>Example Request:<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;https://sandboxapi.transfersolo.com/api/v1/Shareholder/GetHoldingSummary?customerShareholderId=111144&amp;customerIssuerId=1128&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;grant_type: client_credentials&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;client_id: {{clentId}}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;client_secret: {{clientsecret}}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;securityTypeId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;shares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;numberOfCertificates&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;numberOfCertificatesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hasBookCertificates&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;securityTypeId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Warrant&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;shares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;numberOfCertificates&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;numberOfCertificatesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hasBookCertificates&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;securityTypeId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Preferred&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;shares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;250&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;numberOfCertificates&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;numberOfCertificatesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;hasBookCertificates&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-shareholder-createorupdate"><span class="http-method post">POST</span> Shareholder/CreateOrUpdate</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#possible-actions">Possible Actions:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#primary-or-mailing-address-child-attributes">Primary (or Mailing) Address Child Attributes:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-shareholder-details"><span class="http-method get medium">GET</span> Shareholder/Details</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-shareholder-getholdingsummary"><span class="http-method get">GET</span> Shareholder/GetHoldingSummary</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dylan Levsey
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, .
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

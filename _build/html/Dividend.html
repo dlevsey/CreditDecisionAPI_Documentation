@@ -1,0 +1,643 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Credit Decision &#8212; CreditDecisionAPI 1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css?v=7bc2f056" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css?v=37217874" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css?v=6227e517" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css?v=94669e23" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css?v=21a39f42" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css?v=a18b2449" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css?v=dbff53e4" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css?v=d7bf34ee" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/my_custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="_static/my_custom.css?v=0c271358" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=1e5e4989"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/hoverxref.js?v=c3a9726a"></script>
+    <script src="_static/js/tooltipster.bundle.min.js?v=18bf091b"></script>
+    <script src="_static/js/micromodal.min.js?v=04d6302d"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/tabs.js?v=3030b3cb"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Dividend';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="_static/Sardine.png" class="logo__image only-light" alt="CreditDecisionAPI 1 documentation - Home"/>
+    <script>document.write(`<img src="_static/Sardine.png" class="logo__image only-dark" alt="CreditDecisionAPI 1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Credit_Decision.html">Credit Decision</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Dividend.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Credit Decision</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-dividend-getlist"><span class="http-method get">GET</span> Dividend/GetList</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-dividend-generatedividenddetails"><span class="http-method post">POST</span> Dividend/GenerateDividendDetails</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="credit-decision">
+<h1>Credit Decision<a class="headerlink" href="#credit-decision" title="Link to this heading">#</a></h1>
+<p>Allows you to generate a dividend report for a given dividend.</p>
+<section id="endpoints">
+<h2>Endpoints:<a class="headerlink" href="#endpoints" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="http-method get small">GET</span> <a class="reference internal" href="#get-dividend-list"><span class="std std-ref">Dividend/GetList</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method get small">POST</span> <a class="reference internal" href="#generate-dividend-details"><span class="std std-ref">Dividend/GenerateDividendDetails</span></a></p></li>
+</ul>
+</section>
+<section id="get-dividend-getlist">
+<span id="get-dividend-list"></span><h2><span class="http-method get">GET</span> Dividend/GetList<a class="headerlink" href="#get-dividend-getlist" title="Link to this heading">#</a></h2>
+<section id="description">
+<h3>Description:<a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
+<p>Retrieves a list of dividends.</p>
+</section>
+<section id="query-parameters">
+<h3>Query Parameters:<a class="headerlink" href="#query-parameters" title="Link to this heading">#</a></h3>
+</section>
+<section id="example-request">
+<h3>Example Request:<a class="headerlink" href="#example-request" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Dividend/GetList?customerIssuerId=1127&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="response">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#response" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;dividendId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2042</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cash&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Preferred&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8/20/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recordDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1/11/2019&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1 for $3.00&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;oustandingShares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outstandingSharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;250&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">750</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmountFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$750.00&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fractionalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rounded Down&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShare&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShareFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;dividendId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4055</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Stock&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3/24/2020&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recordDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3/24/2020&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1 for 1.6434&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;oustandingShares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">6463100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outstandingSharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;6,463,100&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10621438</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmountFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10,621,438&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fractionalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pay in Cash&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShare&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShareFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$2.00&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;dividendId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2041</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Stock&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8/21/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recordDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8/20/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1 for 2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;oustandingShares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">42600</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outstandingSharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;42,600&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">85200</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmountFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;85,200&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fractionalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rounded Up&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShare&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShareFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$2.50&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;dividendId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2043</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cash&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8/27/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recordDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8/23/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1 for $2.00&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;oustandingShares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">163950</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outstandingSharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;163,950&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">327900</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmountFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$327,900.00&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fractionalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rounded Down&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShare&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShareFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;dividendId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2044</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Stock&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8/29/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recordDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;8/29/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1 for 2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;oustandingShares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">163950</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outstandingSharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;163,950&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">327900</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmountFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;327,900&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fractionalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pay in Cash&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShare&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShareFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$2.00&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;dividendId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2045</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Stock&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9/11/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recordDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9/11/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1 for 2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;oustandingShares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">491850</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outstandingSharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;491,850&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">983700</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmountFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;983,700&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fractionalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pay in Cash&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShare&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShareFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$2.00&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;dividendId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2046</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Cash&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9/18/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recordDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9/14/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1 for $2.00&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;oustandingShares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1475550</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outstandingSharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1,475,550&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2951100</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmountFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$2,951,100.00&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fractionalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Rounded Down&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShare&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShareFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;dividendId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2047</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Stock&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;security&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Common&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;payable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9/20/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;recordDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9/20/2018&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;ratio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1 for 2&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;oustandingShares&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1439400</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;outstandingSharesFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1,439,400&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2878800</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;distributionAmountFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2,878,800&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;fractionalType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pay in Cash&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShare&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cashPerShareFormat&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$2.00&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="post-dividend-generatedividenddetails">
+<span id="generate-dividend-details"></span><h2><span class="http-method post">POST</span> Dividend/GenerateDividendDetails<a class="headerlink" href="#post-dividend-generatedividenddetails" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Description:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Generates a detailed report for a given dividend.</p>
+</section>
+<section id="request-body">
+<h3>Request Body:<a class="headerlink" href="#request-body" title="Link to this heading">#</a></h3>
+</section>
+<section id="id2">
+<h3>Example Request:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/dividend/generatedividenddetails&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">     &quot;dividendId&quot;:4059,</span>
+<span class="s1">     &quot;isPDF&quot;:true</span>
+<span class="s1"> }&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;downloadUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{baseurl}}/Api/v1/Report/DownloadReport/CfDJ8G2a_F-j-rtGiUBjbT5isV0jFreDl552uI6YQ5enntFyUqg4WgDtMO56PfG50Xk9e_wz9a-38A-nBKdxZvJSz5vM_ZAoTdzvM5mqfRch1N-YGT5ErhQ1yQpYRbGdXS2_VB4Uw_JBLLmaZsyCWZMC4WObnXnlCIOGzAFtBMuFs6AT/dividend-4059.pdf/CfDJ8G2a_F-j-rtGiUBjbT5isV30kJSZsZcu3cvfJwPljBGj-yrKmvV4Z6EiH0tssHVmtnfQ2omDWfnWJdzZ88wBe9KOGS6qS5GJdFzwt3fa2-T9Gd6YpF7pscWQvREwSOyep2YnaWtm-dXP_eHyM-8FVvo&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-dividend-getlist"><span class="http-method get">GET</span> Dividend/GetList</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-dividend-generatedividenddetails"><span class="http-method post">POST</span> Dividend/GenerateDividendDetails</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dylan Levsey
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, .
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

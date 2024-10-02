@@ -1,0 +1,2022 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" data-theme="light">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Report &#8212; CreditDecisionAPI 1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster.bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-shadow.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-punk.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-noir.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-light.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/tooltipster-sideTip-borderless.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/micromodal.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/_static/my_custom.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
+    <link rel="stylesheet" type="text/css" href="_static/my_custom.css?v=0c271358" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/jquery.js?v=5d32c60e"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="_static/documentation_options.js?v=1e5e4989"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/hoverxref.js"></script>
+    <script src="_static/js/tooltipster.bundle.min.js"></script>
+    <script src="_static/js/micromodal.min.js"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/tabs.js?v=3030b3cb"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Report';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="light">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+    
+    <img src="_static/Sardine.png" class="logo__image only-light" alt="CreditDecisionAPI 1 documentation - Home"/>
+    <script>document.write(`<img src="_static/Sardine.png" class="logo__image only-dark" alt="CreditDecisionAPI 1 documentation - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Credit_Decision.html">Credit Decision</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Report.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Report</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-report-getownershippercentage"><span class="http-method get">GET</span> Report/GetOwnershipPercentage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-report-getdilutedpercentage"><span class="http-method get">GET</span> Report/GetDilutedPercentage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generatedilutedpercentage"><span class="http-method post">POST</span> Report/GenerateDilutedPercentage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generateshareholderlist"><span class="http-method post">POST</span> Report/GenerateShareholderList</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generateholdingsstatement"><span class="http-method post">POST</span> Report/GenerateHoldingsStatement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generatedrsstatement"><span class="http-method post">POST</span> Report/GenerateDRSStatement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generaterejectionlist"><span class="http-method post">POST</span> Report/GenerateRejectionList</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generateissuercontacts"><span class="http-method post">POST</span> Report/GenerateIssuerContacts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generatemailinglabels"><span class="http-method post">POST</span> Report/GenerateMailingLabels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-report-downloadreport-filecode-filename-accesscode"><span class="http-method get">GET</span> <span class="medium-titles">Report/DownloadReport/{fileCode}/{fileName}/{accessCode}</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="report">
+<h1>Report<a class="headerlink" href="#report" title="Link to this heading">#</a></h1>
+<p>Resource used to generate various types of reports.</p>
+<section id="endpoints">
+<h2>Endpoints:<a class="headerlink" href="#endpoints" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><span class="http-method get small">GET</span> <a class="reference internal" href="#get-ownership-percentage"><span class="std std-ref">Report/GetOwnershipPercentage</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method get small">GET</span> <a class="reference internal" href="#get-diluted-percentage"><span class="std std-ref">Report/GetDilutedPercentage</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method post small">POST</span> <a class="reference internal" href="#post-generate-diluted-percentage"><span class="std std-ref">Report/GenerateDilutedPercentage</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method post small">POST</span> <a class="reference internal" href="#post-generate-shareholder-list"><span class="std std-ref">Report/GenerateShareholderList</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method post small">POST</span> <a class="reference internal" href="#post-generate-holdings-statement"><span class="std std-ref">Report/GenerateHoldingsStatement</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method post small">POST</span> <a class="reference internal" href="#post-generate-drs-statement"><span class="std std-ref">Report/GenerateDRSStatement</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method post small">POST</span> <a class="reference internal" href="#post-generate-rejection-list"><span class="std std-ref">Report/GenerateRejectionList</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method post small">POST</span> <a class="reference internal" href="#post-generate-issuer-contacts"><span class="std std-ref">Report/GenerateIssuerContacts</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method post small">POST</span> <a class="reference internal" href="#post-generate-mailing-labels"><span class="std std-ref">Report/GenerateMailingLabels</span></a></p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method get small">GET</span> <a class="reference internal" href="#get-download-report"><span class="std std-ref">Report/DownloadReport/{fileCode}/{fileName}/{accessCode}</span></a></p></li>
+</ul>
+</section>
+<section id="get-report-getownershippercentage">
+<span id="get-ownership-percentage"></span><h2><span class="http-method get">GET</span> Report/GetOwnershipPercentage<a class="headerlink" href="#get-report-getownershippercentage" title="Link to this heading">#</a></h2>
+<section id="description">
+<h3>Description:<a class="headerlink" href="#description" title="Link to this heading">#</a></h3>
+<p>Allows you retrieve ownership details.</p>
+</section>
+<section id="query-parameters">
+<h3>Query Parameters:<a class="headerlink" href="#query-parameters" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">customerIssuerId</span>
+        <span class="parameter-type">integer</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Your System Issuer Id and not SOLO Issuer Id.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">cutoff</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+   <span class="parameter-description">Cutoff date for report. (Defaults to today.)</span>
+    <span class="parameter-description"><span class= "poss-param-values">ISO 8601 format</span> = standardized date-time representation.</span>
+    <span class="parameter-description">e.g., <span class= "poss-param-values">"yyyy-mm-dd"</span> (Year-Month-Day), <span class= "poss-param-values">"2023-12-21T20:36:27.089Z"</span>, etc. </span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">sortBy</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"><span class="poss-param-values">SortName</span> =  sorts by last and first name. </span>
+    <span class="parameter-description"><span class="poss-param-values">Name</span> = sorts by Shareholder name.</span>
+    <span class="parameter-description"><span class="poss-param-values">Shares</span> = sort by shares amount.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">orderBy</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description">Possible values: <span class= "poss-param-values">Ascending</span>, OR <span class= "poss-param-values">Descending</span>.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description">Has two child attributes: <strong>securityTypeCode</strong> and <strong>securitySeriesCode.</strong> </span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType.securityTypeCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"> <span class= "poss-param-values">Blank</span> = All Securities.</span>
+    <span class="parameter-description"> <span class= "poss-param-values">C</span> = Common Securities. </span>
+    <span class="parameter-description"> <span class= "poss-param-values">P</span> = Preferred Securities.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType.securitySeriesCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">Blank</span> = No series specified. </span>
+    <span class="parameter-description"><span class= "poss-param-values">A</span> = Series A.</span>
+    <span class="parameter-description"><span class= "poss-param-values">B</span> = Series B.</span>
+    <span class="parameter-description"><span class= "poss-param-values">C</span> = Series C.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <a class="reference internal" href="Expanded%20Attributes%20and%20Options.html#detailed-parameter-options"><span class="std std-ref">Expanded Attributes and Options</span></a> page for more info on securityType options.</p>
+</div>
+</section>
+<section id="example-request">
+<h3>Example Request:<a class="headerlink" href="#example-request" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span>--request<span class="w"> </span>GET<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Report/GetOwnershipPercentage?customerIssuerId=1128&amp;cutoff=2023-07-12&amp;filterSecurityType=null&amp;filterSecurityType.securityTypeCode=null&amp;filterSecurityType.securitySeriesCode=null&amp;sortBy=Name&amp;orderBy=Ascending&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR-TOKEN&gt;&#39;</span><span class="se">\</span>
+--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;CustomerIssuerId&quot;:1128,</span>
+<span class="s1">    &quot;Cutoff&quot;:&quot;2023-07-12&quot;,</span>
+<span class="s1">    &quot;FilterSecurityType&quot;:{</span>
+<span class="s1">        &quot;SecurityTypeCode&quot;:&quot;&quot;,</span>
+<span class="s1">        &quot;SecuritySeriesCode&quot;:&quot;&quot;</span>
+<span class="s1">    },</span>
+<span class="s1">    &quot;SortBy&quot;:&quot;Name&quot;,</span>
+<span class="s1">    &quot;OrderBy&quot;:&quot;Ascending&quot;</span>
+<span class="s1">}&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="response">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#response" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;accounts&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2750</span>,
+<span class="w">            </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2750&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2750&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;sortName&quot;</span>:<span class="w"> </span><span class="s2">&quot;Doe Debbie&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;A/C name:Cinda International Securities Ltd for Client&#39;s A/C Titan Asset Management (CHINA) Ltd Name 2 Name 3&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;securities&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Common&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">4</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;4&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">0</span>.11389521640091116,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;0.1139%&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">6097</span>,
+<span class="w">            </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;6097&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;6097&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;sortName&quot;</span>:<span class="w"> </span><span class="s2">&quot;Alekszej Lugovcov&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Alekszej Lugovcov&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;securities&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Bond&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">100</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;100&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">0</span>.46511627906976744,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;0.4651%&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2822</span>,
+<span class="w">            </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2822&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2822&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;sortName&quot;</span>:<span class="w"> </span><span class="s2">&quot;Grater Allie&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Allie Grater&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;securities&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Common&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">40</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;40&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">1</span>.1389521640091116,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1.139%&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2829</span>,
+<span class="w">            </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2829&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2829&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;sortName&quot;</span>:<span class="w"> </span><span class="s2">&quot;Grater Allie&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Allie Grater&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;securities&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Bond&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">400</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;400&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">1</span>.8604651162790697,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1.8605%&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2824</span>,
+<span class="w">            </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2824&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2824&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;sortName&quot;</span>:<span class="w"> </span><span class="s2">&quot;Bacon Chris P. &quot;</span>,
+<span class="w">            </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Chris P. Bacon Emily Demo JT TEN&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;securities&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Common&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">2</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;2&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">3242</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;3,242&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">92</span>.3120728929385,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;92.3121%&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2820</span>,
+<span class="w">            </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2820&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2820&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;sortName&quot;</span>:<span class="w"> </span><span class="s2">&quot;Nutt Hazel&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Hazel Nutt&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;securities&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Common&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">200</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;200&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">5</span>.694760820045558,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;5.6948%&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2826</span>,
+<span class="w">            </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2826&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2826&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;sortName&quot;</span>:<span class="w"> </span><span class="s2">&quot;Yew Olive&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Olive Yew&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;securities&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Warrant&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">2</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;2&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">25</span>,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;25%&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">11981</span>,
+<span class="w">            </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;sortName&quot;</span>:<span class="w"> </span><span class="s2">&quot;Housni Omario&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Omario  Housni&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;securities&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Bond&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">2</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;2&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">21000</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;21,000&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">97</span>.67441860465115,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;97.6744%&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Common&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">2</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;2&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">9</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;9&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">0</span>.25626423690205014,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;0.2563%&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Preferred&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">250</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;250&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">100</span>,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;100%&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Warrant&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificates&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">                    </span><span class="s2">&quot;numberOfCertificatesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">4</span>,
+<span class="w">                    </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;4&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;percentage&quot;</span>:<span class="w"> </span><span class="m">50</span>,
+<span class="w">                    </span><span class="s2">&quot;percentageFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;50%&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span><span class="o">]</span>,
+<span class="w">    </span><span class="s2">&quot;balances&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Common&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;numOfShareholder&quot;</span>:<span class="w"> </span><span class="m">7</span>,
+<span class="w">            </span><span class="s2">&quot;numOfShareholderFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;7&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;totalOutstandingShares&quot;</span>:<span class="w"> </span><span class="m">3512</span>,
+<span class="w">            </span><span class="s2">&quot;totalOutstandingSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;3,512&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;authorizedShares&quot;</span>:<span class="w"> </span><span class="m">999999999999999</span>,
+<span class="w">            </span><span class="s2">&quot;authorizedSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;Unlimited&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;isUnlimited&quot;</span>:<span class="w"> </span><span class="nb">true</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Warrant&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;numOfShareholder&quot;</span>:<span class="w"> </span><span class="m">3</span>,
+<span class="w">            </span><span class="s2">&quot;numOfShareholderFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;totalOutstandingShares&quot;</span>:<span class="w"> </span><span class="m">8</span>,
+<span class="w">            </span><span class="s2">&quot;totalOutstandingSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;8&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;authorizedShares&quot;</span>:<span class="w"> </span><span class="m">2000000</span>,
+<span class="w">            </span><span class="s2">&quot;authorizedSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;2,000,000&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;isUnlimited&quot;</span>:<span class="w"> </span><span class="nb">false</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Preferred&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;numOfShareholder&quot;</span>:<span class="w"> </span><span class="m">1</span>,
+<span class="w">            </span><span class="s2">&quot;numOfShareholderFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;1&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;totalOutstandingShares&quot;</span>:<span class="w"> </span><span class="m">250</span>,
+<span class="w">            </span><span class="s2">&quot;totalOutstandingSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;250&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;authorizedShares&quot;</span>:<span class="w"> </span><span class="m">3000000</span>,
+<span class="w">            </span><span class="s2">&quot;authorizedSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;3,000,000&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;isUnlimited&quot;</span>:<span class="w"> </span><span class="nb">false</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;securityType&quot;</span>:<span class="w"> </span><span class="s2">&quot;Bond&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;numOfShareholder&quot;</span>:<span class="w"> </span><span class="m">3</span>,
+<span class="w">            </span><span class="s2">&quot;numOfShareholderFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;3&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;totalOutstandingShares&quot;</span>:<span class="w"> </span><span class="m">21500</span>,
+<span class="w">            </span><span class="s2">&quot;totalOutstandingSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;21,500&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;authorizedShares&quot;</span>:<span class="w"> </span><span class="m">2500000</span>,
+<span class="w">            </span><span class="s2">&quot;authorizedSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;2,500,000&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;isUnlimited&quot;</span>:<span class="w"> </span><span class="nb">false</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="get-report-getdilutedpercentage">
+<span id="get-diluted-percentage"></span><h2><span class="http-method get">GET</span> Report/GetDilutedPercentage<a class="headerlink" href="#get-report-getdilutedpercentage" title="Link to this heading">#</a></h2>
+<section id="id1">
+<h3>Description:<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<p>Retrieves the ownership percentage for a given issuer.</p>
+</section>
+<section id="id2">
+<h3>Query Parameters:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">customerIssuerId</span>
+        <span class="parameter-type">integer</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Your System Issuer Id and not SOLO Issuer Id.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">cutoff</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+   <span class="parameter-description">Cutoff date for report. (Defaults to today.)</span>
+    <span class="parameter-description"><span class= "poss-param-values">ISO 8601 format</span> = standardized date-time representation.</span>
+    <span class="parameter-description">e.g., <span class= "poss-param-values">"yyyy-mm-dd"</span> (Year-Month-Day), <span class= "poss-param-values">"2023-12-21T20:36:27.089Z"</span>, etc. </span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">isPDF</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-required-font">Required</span>
+        </div>
+        <span class="parameter-description">Generates a PDF.</span>
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = generates a downloadable pdf.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not generate a downloadable pdf.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div></section>
+<section id="id3">
+<h3>Example Request:<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Report/GetDilutedPercentage?customerIssuerId=1128&amp;cutoff=2023-07-12&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR-TOKEN&gt;&#39;</span><span class="se">\</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;securites&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;security&quot;</span>:<span class="w"> </span><span class="s2">&quot;Common&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">3516</span>,
+<span class="w">            </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;3,516&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;shareholders&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2824</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2824&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2824&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Chris P. Bacon Emily Demo JT TEN&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">3242</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;3,242&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2820</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2820&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2820&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Hazel Nutt&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">200</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;200&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2822</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2822&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2822&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Allie Grater&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">40</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;40&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2751</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;A-2751&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;A-2751&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Dean Doe&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">17</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;17&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">11981</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Omario  Housni&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">9</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;9&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2750</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2750&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2750&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;A/C name:Cinda International Securities Ltd for Client&#39;s A/C Titan Asset Management (CHINA) Ltd Name 2 Name 3&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">4</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2761</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2761&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2761&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Jane Doe&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>true,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">4</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;security&quot;</span>:<span class="w"> </span><span class="s2">&quot;Preferred&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">250</span>,
+<span class="w">            </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;250&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;shareholders&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">11981</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Omario  Housni&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">250</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;250&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;security&quot;</span>:<span class="w"> </span><span class="s2">&quot;Warrant&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">8</span>,
+<span class="w">            </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;8&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;shareholders&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">11981</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Omario  Housni&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">4</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;4&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2825</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2825&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2825&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Olive Yew&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">2</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;2&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2826</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2826&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2826&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Olive Yew&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">2</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;2&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>,
+<span class="w">        </span><span class="o">{</span>
+<span class="w">            </span><span class="s2">&quot;security&quot;</span>:<span class="w"> </span><span class="s2">&quot;Bond&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;totalShares&quot;</span>:<span class="w"> </span><span class="m">21510</span>,
+<span class="w">            </span><span class="s2">&quot;totalSharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;21,510&quot;</span>,
+<span class="w">            </span><span class="s2">&quot;shareholders&quot;</span>:<span class="w"> </span><span class="o">[</span>
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">11981</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;111144&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Omario  Housni&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">21000</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;21,000&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">2829</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2829&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;2829&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Allie Grater&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">400</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;400&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">6097</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;6097&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;6097&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;Alekszej Lugovcov&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">100</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;100&quot;</span>
+<span class="w">                </span><span class="o">}</span>,
+<span class="w">                </span><span class="o">{</span>
+<span class="w">                    </span><span class="s2">&quot;systemShareholderId&quot;</span>:<span class="w"> </span><span class="m">4803</span>,
+<span class="w">                    </span><span class="s2">&quot;customerShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;4803&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;displayShareholderId&quot;</span>:<span class="w"> </span><span class="s2">&quot;4803&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;name&quot;</span>:<span class="w"> </span><span class="s2">&quot;A &amp; A Bennett Holdings Pty Ltd&quot;</span>,
+<span class="w">                    </span><span class="s2">&quot;isReserved&quot;</span>:<span class="w"> </span>false,
+<span class="w">                    </span><span class="s2">&quot;shares&quot;</span>:<span class="w"> </span><span class="m">10</span>,
+<span class="w">                    </span><span class="s2">&quot;sharesFormat&quot;</span>:<span class="w"> </span><span class="s2">&quot;10&quot;</span>
+<span class="w">                </span><span class="o">}</span>
+<span class="w">            </span><span class="o">]</span>
+<span class="w">        </span><span class="o">}</span>
+<span class="w">    </span><span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="post-report-generatedilutedpercentage">
+<span id="post-generate-diluted-percentage"></span><h2><span class="http-method post">POST</span> Report/GenerateDilutedPercentage<a class="headerlink" href="#post-report-generatedilutedpercentage" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Description:<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Generates a Diluted Percentage Report.</p>
+</section>
+<section id="request-body">
+<h3>Request Body:<a class="headerlink" href="#request-body" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">customerIssuerId</span>
+        <span class="parameter-type">integer</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Your System Issuer Id and not SOLO Issuer Id.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">cutoff</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+   <span class="parameter-description">Cutoff date for report. (Defaults to today.)</span>
+    <span class="parameter-description"><span class= "poss-param-values">ISO 8601 format</span> = standardized date-time representation.</span>
+    <span class="parameter-description">e.g., <span class= "poss-param-values">"yyyy-mm-dd"</span> (Year-Month-Day), <span class= "poss-param-values">"2023-12-21T20:36:27.089Z"</span>, etc. </span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">isPDF</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-required-font">Required</span>
+        </div>
+        <span class="parameter-description">Generates a PDF.</span>
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = generates a downloadable pdf.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not generate a downloadable pdf.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div></section>
+<section id="id6">
+<h3>Example Request:<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Report/GenerateDilutedPercentage&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w"> </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">     &quot;customerIssuerId&quot;:1128,</span>
+<span class="s1">     &quot;cutoff&quot;:&quot;2023-07-12&quot;,</span>
+<span class="s1">     &quot;isPDF&quot;:true</span>
+<span class="s1"> }&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id7">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="s2">&quot;downloadUrl&quot;</span>:<span class="w"> </span><span class="s2">&quot;{{baseurl}}/Api/v1/Report/DownloadReport/CfDJ8G2a_F-j-rtGiUBjbT5isV1Ipqf4dR3GqLU2YxSgt48du3Ou-WqbxdXRIMvStv89lntvqfGdfX6LyQ2ZsxZ0WwFMw3wS_vPk4-yAYFAGb0J9Db4MTUzzBgXW3rWh-zWHKn0IEFZFbB1y9YZNc7Pqx60Ja_ATwXDQd4iFdYokEiPC/Diluted-Percentage.pdf/CfDJ8G2a_F-j-rtGiUBjbT5isV3Hu-jA7zMIrWfSA_7r-cX3Xf7T7H79utc9yZKwgwkaC3Ulo2Fs9kpX0MeahnEHr9HWBUmT5q9jCGVRizTQwdMrjFsCTm6RELhzi72RTLNi_hxxrJKwzMUFG80smDDvI5Y&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="post-report-generateshareholderlist">
+<span id="post-generate-shareholder-list"></span><h2><span class="http-method post">POST</span> Report/GenerateShareholderList<a class="headerlink" href="#post-report-generateshareholderlist" title="Link to this heading">#</a></h2>
+<section id="id8">
+<h3>Description:<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Generates detailed Shareholder List Reports.</p>
+</section>
+<section id="id9">
+<h3>Request Body:<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">customerIssuerId</span>
+        <span class="parameter-type">integer</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Your System Issuer Id and not SOLO Issuer Id.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">cutoff</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+
+    <span class="parameter-description">Cutoff date for report. (Defaults to today.)</span>
+    <span class="parameter-description"><span class= "poss-param-values">ISO 8601 format</span> = standardized date-time representation.</span>
+    <span class="parameter-description">e.g., <span class= "poss-param-values">"yyyy-mm-dd"</span> (Year-Month-Day), <span class= "poss-param-values">"2023-12-21T20:36:27.089Z"</span>, etc. </span>
+
+    <span class="parameter-bottom-bar"></span>
+
+
+    </div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">isPDF</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description">Generates a PDF.</span>
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = generates a downloadable pdf.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not generate a downloadable pdf.</span>
+
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">customerShareholderId</span>
+            <span class="parameter-type">string</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description">Id of the Shareholder.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">showCertificateDetails</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description">Will show details of certificate.</span>
+
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = shows details.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not show details.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">showAddressInfo</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description">Shows address info for each Shareholder.</span>
+
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = shows address info.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not show address info</span>
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">showContactInfo</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description">Shows contact info for each Shareholder.</span>
+
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = shows contact info.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not show contact info.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">showTaxId</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">true</span> = shows tax id.</span>
+    <span class="parameter-description"><span class= "poss-param-values">false</span> = does not show tax id.</span>
+    <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">hideCanceledDateIfGreaterThanCutoff</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = hides canceled date(s) that occur after cutoff.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = shows canceled date(s) that occur after cutoff. </span>
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description">Has two child attributes: <strong>securityTypeCode</strong> and <strong>securitySeriesCode.</strong> </span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType.securityTypeCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"> <span class= "poss-param-values">Blank</span> = All Securities.</span>
+    <span class="parameter-description"> <span class= "poss-param-values">C</span> = Common Securities. </span>
+    <span class="parameter-description"> <span class= "poss-param-values">P</span> = Preferred Securities.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType.securitySeriesCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">Blank</span> = No series specified. </span>
+    <span class="parameter-description"><span class= "poss-param-values">A</span> = Series A.</span>
+    <span class="parameter-description"><span class= "poss-param-values">B</span> = Series B.</span>
+    <span class="parameter-description"><span class= "poss-param-values">C</span> = Series C.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <a class="reference internal" href="Expanded%20Attributes%20and%20Options.html#detailed-parameter-options"><span class="std std-ref">Expanded Attributes and Options</span></a> page for more info on securityType options.</p>
+</div>
+<div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">Prefix</span>
+            <span class="parameter-type">string</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description"></span>
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">certificateInfoStatus</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">All</span> = Outstanding and Canceled Shares.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class= "poss-param-values">Outstanding</span> = Outstanding Shares.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class= "poss-param-values">Canceled</span> = Canceled Shares.</span>
+    <span class="parameter-description"></span>
+    <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">restrictionStatus</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description"><span class="poss-param-values">All</span> = Restricted and Non-Restricted.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class="poss-param-values">Restricted</span> = Restricted Shares.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class="poss-param-values">NonRestricted</span> = Non-Restricted Shares.</span>
+    <span class="parameter-description"></span>
+    <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">addressStatus</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">All</span> = Good and Bad Addresses.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class= "poss-param-values">GoodAddress</span> = Good Address.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class= "poss-param-values">BadAddress</span> = Bad Address.</span>
+    <span class="parameter-description"></span>
+    <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">includeTaxLots</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+
+        <span class="parameter-description"> <strong>Note:</strong> Only used for excel report(s).</span>
+
+
+        <span class= "parameter-bottom-bar"></span>
+</div></section>
+<section id="id10">
+<h3>Example Request:<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Report/GenerateShareholderList&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">        &quot;CustomerIssuerId&quot;:1128,</span>
+<span class="s1">        &quot;Cutoff&quot;:&quot;2023-07-12&quot;,</span>
+<span class="s1">        &quot;IsPDF&quot;:true,</span>
+<span class="s1">        &quot;CustomerShareholderId&quot;:&quot;&quot;,</span>
+<span class="s1">        &quot;ShowCertificateDetails&quot;:true,</span>
+<span class="s1">        &quot;ShowAddressInfo&quot;:true,</span>
+<span class="s1">        &quot;ShowContactInfo&quot;:true,</span>
+<span class="s1">        &quot;ShowTaxId&quot;:false,</span>
+<span class="s1">        &quot;HideCanceledDateIfGreaterThanCutoff&quot;:true,</span>
+<span class="s1">        &quot;IncludeAccessCode&quot;:false,</span>
+<span class="s1">        &quot;FilterSecurityType&quot;:{</span>
+<span class="s1">            &quot;SecurityTypeCode&quot;:&quot;&quot;,</span>
+<span class="s1">            &quot;SecuritySeriesCode&quot;:&quot;&quot;</span>
+<span class="s1">        },</span>
+<span class="s1">        &quot;Prefix&quot;:null,</span>
+<span class="s1">        &quot;IncludeTaxLots&quot;:false,</span>
+<span class="s1">        &quot;certificateInfoStatus&quot;: &quot;All&quot;,</span>
+<span class="s1">        &quot;restrictionStatus&quot;: &quot;All&quot;,</span>
+<span class="s1">        &quot;addressStatus&quot;:&quot;All&quot;</span>
+<span class="s1">    }&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id11">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;downloadUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{baseurl}}/Api/v1/Report/DownloadReport/CfDJ8G2a_F-j-rtGiUBjbT5isV2wcEw561cMP_pbSIaQkCXKbNmn6KI7RdZevTxnss634C7FI4lY-qsTUGCvoV7wohmATPxQb-Lf33SVyEm8KR1bbEJCf-HopdqUBbOGFkY2ri67QaY-KE9IL7M8LuUXQcFv7WNVzx0YWZ75P9qrjNrg/Shareholder-List.pdf/CfDJ8G2a_F-j-rtGiUBjbT5isV3h8RXKra1JIG5uf2274pKFfrJdFZ8UGyxvi63k9At7cDCyuT8LW1tGKDDF9ZwpTZz14s1mALgR1PWSr8qLNLKaaMJvdz5XNTJUf0LHfbcGp_3BabbmbG3ZGnSBr0ChtC0&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="post-report-generateholdingsstatement">
+<span id="post-generate-holdings-statement"></span><h2><span class="http-method post">POST</span> Report/GenerateHoldingsStatement<a class="headerlink" href="#post-report-generateholdingsstatement" title="Link to this heading">#</a></h2>
+<section id="id12">
+<h3>Description:<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Generates a Holding Statement.</p>
+</section>
+<section id="id13">
+<h3>Request Body:<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">customerIssuerId</span>
+        <span class="parameter-type">integer</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Your System Issuer Id and not SOLO Issuer Id.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">isPDF</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description">Generates a PDF.</span>
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = generates a downloadable pdf.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not generate a downloadable pdf.</span>
+
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">cutoff</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+
+    <span class="parameter-description">Cutoff date for report. (Defaults to today.)</span>
+    <span class="parameter-description"><span class= "poss-param-values">ISO 8601 format</span> = standardized date-time representation.</span>
+    <span class="parameter-description">e.g., <span class= "poss-param-values">"yyyy-mm-dd"</span> (Year-Month-Day), <span class= "poss-param-values">"2023-12-21T20:36:27.089Z"</span>, etc. </span>
+
+    <span class="parameter-bottom-bar"></span>
+
+
+    </div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">customerShareholderId</span>
+            <span class="parameter-type">string</span>
+            <span class="parameter-requirement-required-font">Required</span>
+        </div>
+        <span class="parameter-description">Id of the Shareholder.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">status</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description"><span class="poss-param-values">All</span> = Outstanding and Canceled Shares.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class="poss-param-values">Outstanding</span> = Outstanding Shares Only.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class="poss-param-values">Canceled</span> = Canceled Shares Only.</span>
+    <span class="parameter-description"></span>
+    <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description">Has two child attributes: <strong>securityTypeCode</strong> and <strong>securitySeriesCode.</strong> </span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType.securityTypeCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"> <span class= "poss-param-values">Blank</span> = All Securities.</span>
+    <span class="parameter-description"> <span class= "poss-param-values">C</span> = Common Securities. </span>
+    <span class="parameter-description"> <span class= "poss-param-values">P</span> = Preferred Securities.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType.securitySeriesCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">Blank</span> = No series specified. </span>
+    <span class="parameter-description"><span class= "poss-param-values">A</span> = Series A.</span>
+    <span class="parameter-description"><span class= "poss-param-values">B</span> = Series B.</span>
+    <span class="parameter-description"><span class= "poss-param-values">C</span> = Series C.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <a class="reference internal" href="Expanded%20Attributes%20and%20Options.html#detailed-parameter-options"><span class="std std-ref">Expanded Attributes and Options</span></a> page for more info on securityType options.</p>
+</div>
+</section>
+<section id="id14">
+<h3>Example Request:<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Report/GenerateHoldingsStatement&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">        &quot;CustomerIssuerId&quot;:1128,</span>
+<span class="s1">        &quot;Cutoff&quot;:&quot;2023-11-14&quot;,</span>
+<span class="s1">        &quot;IsPDF&quot;:true,</span>
+<span class="s1">        &quot;CustomerShareholderId&quot;:&quot;A-2751&quot;,</span>
+<span class="s1">        &quot;FilterSecurityType&quot;:{</span>
+<span class="s1">            &quot;SecurityTypeCode&quot;:&quot;&quot;,</span>
+<span class="s1">            &quot;SecuritySeriesCode&quot;:&quot;&quot;</span>
+<span class="s1">        },</span>
+<span class="s1">        &quot;Status&quot;:&quot;All&quot;</span>
+<span class="s1">    }&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id15">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;downloadUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{{baseurl}}/Api/v1/Report/DownloadReport/CfDJ8G2a_F-j-rtGiUBjbT5isV1QU_bcrzB7OMDIk4Rj96uf1rOh9P5X7HyHX1fM0NW3T6fXv7JC_hDGMdgiUCY3PJjVs935UeZ_7u7mMBd9E57-v7vKZS_8DYhVFd51dSc3S6LO3wS4H_JWT071KDPm3jmAy-5IN0CiHNc-P1h-erG4/holdings-statement.pdf/CfDJ8G2a_F-j-rtGiUBjbT5isV1UQ_FD2CjSQMgfGvT16Lp78h6vl9iWJKej-DkXuTkMTbrH1cPoQhm6k5K5Gh1Uh6n3wihmDYjTpXT9ZP_zhgmrTU7g38P_mn3WscfOJb1L99imnDX1yeDXmRJljxeN420&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="post-report-generatedrsstatement">
+<span id="post-generate-drs-statement"></span><h2><span class="http-method post">POST</span> Report/GenerateDRSStatement<a class="headerlink" href="#post-report-generatedrsstatement" title="Link to this heading">#</a></h2>
+<section id="id16">
+<h3>Description:<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>Generates a DRS statement.</p>
+</section>
+<section id="id17">
+<h3>Request Body:<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">customerIssuerId</span>
+        <span class="parameter-type">integer</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Your System Issuer Id and not SOLO Issuer Id.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">isPDF</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description">Generates a PDF.</span>
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = generates a downloadable pdf.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not generate a downloadable pdf.</span>
+
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">cutoff</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+
+    <span class="parameter-description">Cutoff date for report. (Defaults to today.)</span>
+    <span class="parameter-description"><span class= "poss-param-values">ISO 8601 format</span> = standardized date-time representation.</span>
+    <span class="parameter-description">e.g., <span class= "poss-param-values">"yyyy-mm-dd"</span> (Year-Month-Day), <span class= "poss-param-values">"2023-12-21T20:36:27.089Z"</span>, etc. </span>
+
+    <span class="parameter-bottom-bar"></span>
+
+
+    </div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">customerShareholderId</span>
+            <span class="parameter-type">string</span>
+            <span class="parameter-requirement-optional-font">Optional</span>
+        </div>
+        <span class="parameter-description">Id of the Shareholder.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Has two child attributes: <strong>securityTypeCode</strong> and <strong>securitySeriesCode.</strong> </span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType.securityTypeCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"> <span class= "poss-param-values">Blank</span> = All Securities.</span>
+    <span class="parameter-description"> <span class= "poss-param-values">C</span> = Common Securities. </span>
+    <span class="parameter-description"> <span class= "poss-param-values">P</span> = Preferred Securities.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">filterSecurityType.securitySeriesCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">Blank</span> = No series specified. </span>
+    <span class="parameter-description"><span class= "poss-param-values">A</span> = Series A.</span>
+    <span class="parameter-description"><span class= "poss-param-values">B</span> = Series B.</span>
+    <span class="parameter-description"><span class= "poss-param-values">C</span> = Series C.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <a class="reference internal" href="Expanded%20Attributes%20and%20Options.html#detailed-parameter-options"><span class="std std-ref">Expanded Attributes and Options</span></a> page for more info on securityType options.</p>
+</div>
+</section>
+<section id="id18">
+<h3>Example Request:<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Report/GenerateDRSStatement&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">        &quot;CustomerIssuerId&quot;:1128,</span>
+<span class="s1">        &quot;Cutoff&quot;:&quot;2023-07-12&quot;,</span>
+<span class="s1">        &quot;IsPDF&quot;:true,</span>
+<span class="s1">        &quot;CustomerShareholderId&quot;:&quot;A-2751&quot;,</span>
+<span class="s1">        &quot;FilterSecurityType&quot;:{</span>
+<span class="s1">            &quot;SecurityTypeCode&quot;:&quot;&quot;,</span>
+<span class="s1">            &quot;SecuritySeriesCode&quot;:&quot;&quot;</span>
+<span class="s1">        }</span>
+<span class="s1">    }&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id19">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;downloadUrl&quot;</span>:<span class="w"> </span><span class="s2">&quot;{{baseurl}}/Api/v1/Report/DownloadReport/CfDJ8G2a_F-j-rtGiUBjbT5isV1MgiNYlrXARXztdal9Bfjp4AlskfjaGeYNaNAvkykFAtxJZgWKGMv7FN0_7833paOaUVgRncSWlU6vW1Cmn9v7n2PAhB23UPuWsMzCmA_MkFqJvk_7CTlxCBGtyt0hqnfuj5-CM4kXAv_qVvw9-yqW/drs-statement.pdf/CfDJ8G2a_F-j-rtGiUBjbT5isV1OojEp18qP2BaqvfxmvSZyUcIHL5y-tPM5HxEJRlKQJiJ42F7e7h8ZygwvNaKkNewYAP7JiyBVtxdb9cAjGX2RMyKAI6XXoNxjjuEulGQalrRUrzXFt_DrDcBsos1_YKE&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="post-report-generaterejectionlist">
+<span id="post-generate-rejection-list"></span><h2><span class="http-method post">POST</span> Report/GenerateRejectionList<a class="headerlink" href="#post-report-generaterejectionlist" title="Link to this heading">#</a></h2>
+<section id="id20">
+<h3>Description:<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<p>Generates a Rejection List.</p>
+</section>
+<section id="id21">
+<h3>Request Body:<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">customerIssuerId</span>
+        <span class="parameter-type">integer</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Your System Issuer Id and not SOLO Issuer Id.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">type</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description"><span class="poss-param-values">MasterRejection</span> = DTC & Medallion Rejection.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class="poss-param-values">DTCRejection</span> = DTC Rejection.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class="poss-param-values">MedallionRejection</span> = Medallion Rejection.</span>
+    <span class="parameter-description"></span>
+    <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">startDate</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description">Start date for report.</span>
+    <span class="parameter-description"><span class="poss-param-values">ISO 8601 format</span> = standardized date-time representation.</span>
+    <span class="parameter-description">e.g., <span class="poss-param-values">"yyyy-mm-dd"</span> (Year-Month-Day), <span class= "poss-param-values">"2023-12-21T20:36:27.089Z"</span>, etc. </span>
+    <span class="parameter-bottom-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">endDate</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description">End date for report.</span>
+    <span class="parameter-description"><span class= "poss-param-values">ISO 8601 format</span> = standardized date-time representation.</span>
+    <span class="parameter-description">e.g., <span class= "poss-param-values">"yyyy-mm-dd"</span> (Year-Month-Day), <span class= "poss-param-values">"2023-12-21T20:36:27.089Z"</span>, etc. </span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">includeInvoiceNumber</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-required-font">Required</span>
+        </div>
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = displays invoice number created by system.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not display invoice number created by system.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">isPDF</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-required-font">Required</span>
+        </div>
+        <span class="parameter-description">Generates a PDF.</span>
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = generates a downloadable pdf.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not generate a downloadable pdf.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div></section>
+<section id="id22">
+<h3>Example Request:<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Report/GenerateRejectionList&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">        &quot;CustomerIssuerId&quot;:10000,</span>
+<span class="s1">        &quot;Type&quot;:&quot;MasterRejection&quot;,</span>
+<span class="s1">        &quot;StartDate&quot;:&quot;2016-01-31&quot;,</span>
+<span class="s1">        &quot;EndDate&quot;:&quot;2023-07-31&quot;,</span>
+<span class="s1">        &quot;IncludeInvoiceNumber&quot;:false,</span>
+<span class="s1">        &quot;IsPDF&quot;:true</span>
+<span class="s1">    }&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id23">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;downloadUrl&quot;</span>:<span class="w"> </span><span class="s2">&quot;{{baseurl}}/Api/v1/Report/DownloadReport/CfDJ8G2a_F-j-rtGiUBjbT5isV2ISH2DjgT1oPl3XFxDrhUrD-oz1JTss0wRLUmKOBJd-XbtFkSTkAVBIorFv-ouatD-npnrXF9hJzhm6XofUZS1GH7G8L7sHo4EezhT4rnT7P2wNWrAPNWduhdOX7AUBLvNKNi_KjO88AbO1bwByukj/rejection-list.pdf/CfDJ8G2a_F-j-rtGiUBjbT5isV1uJDuq4x7wFpZHSfRd52zqBvTcKJTiNxlzmzGshksdBP4CyXPJVTs8kW_A2VMaIGS7sd9Mj9M25LZLXxiqRz7rvYQQdMqmS8H6ZhwJDim5pnnUaJx1PoOtUw14Be-OsNc&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="post-report-generateissuercontacts">
+<span id="post-generate-issuer-contacts"></span><h2><span class="http-method post">POST</span> Report/GenerateIssuerContacts<a class="headerlink" href="#post-report-generateissuercontacts" title="Link to this heading">#</a></h2>
+<section id="id24">
+<h3>Description:<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
+<p>Generates a downloadable report of an Issuer’s Contacts.</p>
+</section>
+<section id="id25">
+<h3>Request Body:<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">customerIssuerId</span>
+        <span class="parameter-type">integer</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Your System Issuer Id and not SOLO Issuer Id.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">status</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">All</span> = Active and Inactive Contacts.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"> <span class= "poss-param-values">Active</span> = Active Contacts.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class= "poss-param-values">Inactive</span>  = Inactive Contacts.</span>
+    <span class="parameter-description"></span>
+    <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+
+        <div class="name-and-requirement">
+            <span class="parameter-name">isPDF</span>
+            <span class="parameter-type">bool</span>
+            <span class="parameter-requirement-required-font">Required</span>
+        </div>
+        <span class="parameter-description">Generates a PDF.</span>
+        <span class="parameter-description"><span class= "poss-param-values">true</span> = generates a downloadable pdf.</span>
+        <span class="parameter-description"><span class= "poss-param-values">false</span> = does not generate a downloadable pdf.</span>
+        <span class= "parameter-bottom-bar"></span>
+</div></section>
+<section id="id26">
+<h3>Example Request:<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Report/GenerateIssuerContacts&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">        &quot;CustomerIssuerId&quot;:10000,</span>
+<span class="s1">        &quot;Status&quot;:&quot;All&quot;,</span>
+<span class="s1">        &quot;IsPDF&quot;:true</span>
+<span class="s1">    }&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id27">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id27" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="s2">&quot;downloadUrl&quot;</span>:<span class="w"> </span><span class="s2">&quot;{{baseurl}}/Api/v1/Report/DownloadReport/CfDJ8G2a_F-j-rtGiUBjbT5isV3TVlIlVToEtV9JxVsr60VJ9LfP5N-Z8ixV--kX5sZDx4gQ5fAgbThffG-65kc1nf5i_KVCvU6NNdySDDC5F25-DwAmpOTu1fbUiKFjjMHDX7FSMT-tz7D0L2jLoKocuXGltF18Zi7gCCFuQjtNUliv/issuer-contacts.pdf/CfDJ8G2a_F-j-rtGiUBjbT5isV0VroFVLDVFwKMNCcIMM3Bk2Au3I7Em45KWbeNXzi4A4NWbnRFYwBm5U3P8HMm8jPZSuHIKOtHqYHrZhAZ-vnxNJt136Oc_VVMPgNaiFSM_rTBjrd5S3InvFcm6BKJhANs&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="post-report-generatemailinglabels">
+<span id="post-generate-mailing-labels"></span><h2><span class="http-method post">POST</span> Report/GenerateMailingLabels<a class="headerlink" href="#post-report-generatemailinglabels" title="Link to this heading">#</a></h2>
+<section id="id28">
+<h3>Description:<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<p>Generates mailing labels for an Issuer.</p>
+</section>
+<section id="id29">
+<h3>Request Body:<a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">customerIssuerId</span>
+        <span class="parameter-type">integer</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Your System Issuer Id and not SOLO Issuer Id.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">labelType</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class='parameter-description'>Options include: AVERY5160, AVERY5159,..., AVERY8932. </span>
+   <span class='parameter-description'></span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Refer to the <a class="reference internal" href="Expanded%20Attributes%20and%20Options.html#detailed-parameter-options"><span class="std std-ref">Expanded Attributes and Options</span></a> page for more info on securityType options.</p>
+</div>
+<div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">cutoff</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+   <span class="parameter-description">Cutoff date for report. (Defaults to today.)</span>
+    <span class="parameter-description"><span class= "poss-param-values">ISO 8601 format</span> = standardized date-time representation.</span>
+    <span class="parameter-description">e.g., <span class= "poss-param-values">"yyyy-mm-dd"</span> (Year-Month-Day), <span class= "poss-param-values">"2023-12-21T20:36:27.089Z"</span>, etc. </span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">restriction</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description"><span class="poss-param-values">All</span> = Restricted and Non-Restricted.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class="poss-param-values">Restricted</span> = Restricted Shares.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class="poss-param-values">NonRestricted</span> = Non-Restricted Shares.</span>
+    <span class="parameter-description"></span>
+    <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">addressStatus</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">All</span> = Good and Bad Addresses.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class= "poss-param-values">GoodAddress</span> = Good Address.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class= "poss-param-values">BadAddress</span> = Bad Address.</span>
+    <span class="parameter-description"></span>
+    <span class= "parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">holdingStatus</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-optional-font">Optional</span>
+    </div>
+    <span class="parameter-description"><span class= "poss-param-values">All</span> = All Certificates.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class= "poss-param-values">Outstanding</span> = Outstanding Shares.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-description"><span class= "poss-param-values">Canceled</span> = Canceled Shares.</span>
+    <span class="parameter-description"></span>
+    <span class="parameter-bottom-bar"></span>
+</div></section>
+<section id="id30">
+<h3>Example Request:<a class="headerlink" href="#id30" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/api/v1/Report/GenerateMailingLabels&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer &lt;YOUR TOKEN&gt;&#39;</span><span class="w"> </span><span class="se">\</span>
+--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;CustomerIssuerId&quot;:9999,</span>
+<span class="s1">    &quot;Cutoff&quot;:&quot;2023-07-12&quot;,</span>
+<span class="s1">    &quot;Restriction&quot;:&quot;All&quot;,</span>
+<span class="s1">    &quot;AddressStatus&quot;:&quot;GoodAddress&quot;,</span>
+<span class="s1">    &quot;HoldingStatus&quot;:&quot;All&quot;,</span>
+<span class="s1">    &quot;labelType&quot;:&quot;AVERY5160&quot;</span>
+<span class="s1">}&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="id31">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;downloadUrl&quot;</span>:<span class="w"> </span><span class="s2">&quot;{{baseurl}}/Api/v1/Report/DownloadReport/CfDJ8G2a_F-j-rtGiUBjbT5isV01DSiZEIqd_29RmVlRL0HmNCbrPj6lxxf1SQ9Ki1OSNSrTrU-BrZ6z2_kHAeQ9hTm2hzDbhpTErXLntnxsRSzaz3xl53MMQ1lARAWQRZ-kYbKjYXeSQy5lWUZUGUpRPEGWreT8VEBrHPFSSqg1gfEe/mailing-labels.pdf/CfDJ8G2a_F-j-rtGiUBjbT5isV0QQLTel3EF5cxAHqNaPc4MIZdt6PIL1Y9yqTaULcnfYu_6yiOGWYy-MZ_Vu7g81l_oc6h27t0b2PDzia4LxK_hS2XsZzaWFoG51sDTlGF3lcF7xqRfABVh8UzBQ4YTbzg&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="get-report-downloadreport-filecode-filename-accesscode">
+<span id="get-download-report"></span><h2><span class="http-method get">GET</span> <span class="medium-titles">Report/DownloadReport/{fileCode}/{fileName}/{accessCode}</span><a class="headerlink" href="#get-report-downloadreport-filecode-filename-accesscode" title="Link to this heading">#</a></h2>
+<section id="id32">
+<h3>Description:<a class="headerlink" href="#id32" title="Link to this heading">#</a></h3>
+<p>Allows for the downloading of a report.</p>
+</section>
+<section id="id33">
+<h3>Query Parameters:<a class="headerlink" href="#id33" title="Link to this heading">#</a></h3>
+<div class="parameter-item">
+    <span class="parameter-initial-bar"></span>
+
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">fileCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Unique code needed to identify a specific file.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">fileName</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">Name of file to be downloaded.</span>
+    <span class="parameter-bottom-bar"></span>
+</div><div class="parameter-item">
+    <div class="name-and-requirement">
+        <span class="parameter-name">accessCode</span>
+        <span class="parameter-type">string</span>
+        <span class="parameter-requirement-required-font">Required</span>
+    </div>
+    <span class="parameter-description">For securing the download.</span>
+    <span class="parameter-bottom-bar"></span>
+</div></section>
+<section id="id34">
+<h3>Example Request:<a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s2">&quot;http://sandboxapi.transfersolo.com/api/v1/Report/DownloadReport/123/ExampleFile/111 \</span>
+<span class="s2">-H &quot;</span>accept:text/plain<span class="s2">&quot; \</span>
+</pre></div>
+</div>
+</section>
+<section id="id35">
+<h3><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#id35" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+<span class="w">    </span><span class="s2">&quot;downloadUrl&quot;</span>:<span class="w"> </span><span class="s2">&quot;{{baseurl}}/Api/v1/Report/DownloadReport/CfDJ8G2a_F-j-rtGiUBjbT5isV01DSiZEIqd_29RmVlRL0HmNCbrPj6lxxf1SQ9Ki1OSNSrTrU-BrZ6z2_kHAeQ9hTm2hzDbhpTErXLntnxsRSzaz3xl53MMQ1lARAWQRZ-kYbKjYXeSQy5lWUZUGUpRPEGWreT8VEBrHPFSSqg1gfEe/mailing-labels.pdf/CfDJ8G2a_F-j-rtGiUBjbT5isV0QQLTel3EF5cxAHqNaPc4MIZdt6PIL1Y9yqTaULcnfYu_6yiOGWYy-MZ_Vu7g81l_oc6h27t0b2PDzia4LxK_hS2XsZzaWFoG51sDTlGF3lcF7xqRfABVh8UzBQ4YTbzg&quot;</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-report-getownershippercentage"><span class="http-method get">GET</span> Report/GetOwnershipPercentage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-report-getdilutedpercentage"><span class="http-method get">GET</span> Report/GetDilutedPercentage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generatedilutedpercentage"><span class="http-method post">POST</span> Report/GenerateDilutedPercentage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generateshareholderlist"><span class="http-method post">POST</span> Report/GenerateShareholderList</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generateholdingsstatement"><span class="http-method post">POST</span> Report/GenerateHoldingsStatement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generatedrsstatement"><span class="http-method post">POST</span> Report/GenerateDRSStatement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generaterejectionlist"><span class="http-method post">POST</span> Report/GenerateRejectionList</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generateissuercontacts"><span class="http-method post">POST</span> Report/GenerateIssuerContacts</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id27"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#post-report-generatemailinglabels"><span class="http-method post">POST</span> Report/GenerateMailingLabels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">Request Body:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#get-report-downloadreport-filecode-filename-accesscode"><span class="http-method get">GET</span> <span class="medium-titles">Report/DownloadReport/{fileCode}/{fileName}/{accessCode}</span></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">Description:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">Query Parameters:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">Example Request:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id35"><span class="http-method good-response medium">200</span> Response:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dylan Levsey
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, .
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
