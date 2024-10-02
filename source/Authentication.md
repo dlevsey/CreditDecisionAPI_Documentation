@@ -1,7 +1,7 @@
 
 
 
-.. _Authentication:
+
 
 # Authentication
 
