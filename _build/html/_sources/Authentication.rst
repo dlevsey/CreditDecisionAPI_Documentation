@@ -4,29 +4,25 @@
 .. _Authentication:
 
 
-Authentication
-==============
-
-
-.. contents::
-   :local:
-   :depth: 2
+# Authentication
 
 
 
-Obtaining Credentials
----------------------
+The Credit Decision API uses API keys for authentication.
 
-To access the API, you will need the following credentials:
+- API keys are required for every endpoint.
 
-- `clientId`: Your client ID.
-- `clientSecret`: Your client secret.
-
-These are provided when you register.
+- API keys are passed in the `Authorization` header as a Bearer token.
 
 
-SOLO Sandbox Information
-------------------------
+## Servers
+
+
+- **Production Server:** `https://api.fintehcbank.com/v1`
+
+- **Sandbox Server:** `https://sandboxapi.transfersolo.com`
+
+
 
 
 - **Endpoint for Access Token:** `https://sandboxapi.transfersolo.com/connect/token` 

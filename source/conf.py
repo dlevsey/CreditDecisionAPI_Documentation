@@ -121,7 +121,8 @@ extensions = [
     'hoverxref.extension',
     'sphinx_copybutton',
     'sphinx_togglebutton',
-    'sphinx_tabs.tabs'
+    'sphinx_tabs.tabs',
+    'sphinx_design'
 ]
 
 todo_include_todos = True
@@ -224,7 +225,7 @@ roles.register_local_role("httpmethod", httpmethod_role)
 
 roles.register_local_role("smaller-titles", smaller_titles)
 roles.register_local_role("medium-titles", medium_titles)
-roles.register_local_role("httpmethod-good-response-medium", httpmethod_good_response_medium_role)  
+roles.register_local_role("httpmethod-good-response-medium", httpmethod_good_response_medium_role)
 roles.register_local_role("scenario", scenario)
 
 

@@ -42,7 +42,8 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/_static/my_custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="_static/my_custom.css?v=d5e4bed0" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/my_custom.css?v=59120d7d" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -66,6 +67,7 @@
     <script src="_static/tabs.js?v=3030b3cb"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Credit_Decision';</script>
@@ -332,17 +334,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-credit-decision"><span class="http-method post">POST</span> /credit-decision</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#request"><span class="http-method good-response medium">200</span> Request:</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-invalid-request-data"><span class="http-method error-response-400 medium">400</span> Response: Invalid Request Data</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-unauthorized-access"><span class="http-method error-response-401 medium">401</span> Response: Unauthorized Access</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-internal-server-error"><span class="http-method error-response-500 medium">500</span> Response: Internal Server Error</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#http-responses">HTTP Responses</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Request:</a></li>
 </ul>
 </li>
 </ul>
@@ -364,9 +360,6 @@ document.write(`
 <h2>Endpoints:<a class="headerlink" href="#endpoints" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p><span class="http-method post small">POST</span> <a class="reference internal" href="#post-credit-decision"><span class="std std-ref">POST /credit-decision</span></a></p></li>
-</ul>
-<ul class="simple">
-<li><p><span class="http-method get small">POST</span> <span class="xref std std-ref">Dividend/GenerateDividendDetails</span></p></li>
 </ul>
 <section id="post-credit-decision">
 <span id="id1"></span><h3><span class="http-method post">POST</span> /credit-decision<a class="headerlink" href="#post-credit-decision" title="Link to this heading">#</a></h3>
@@ -437,9 +430,9 @@ document.write(`
 <div class="parameter-bottom-bar docutils container">
 </div>
 </div>
+<section id="request">
+<h5><span class="http-method good-response medium">200</span> Request:<a class="headerlink" href="#request" title="Link to this heading">#</a></h5>
 </section>
-<section id="example-request">
-<h4>Example Request:<a class="headerlink" href="#example-request" title="Link to this heading">#</a></h4>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">   </span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/credit-decision&#39;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
 <span class="w">  </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer {{your_api_key}}&#39;</span><span class="w"> </span><span class="se">\</span>
@@ -467,34 +460,94 @@ document.write(`
 <span class="p">}</span>
 </pre></div>
 </div>
-<section id="response-invalid-request-data">
-<h5><span class="http-method error-response-400 medium">400</span> Response: Invalid Request Data<a class="headerlink" href="#response-invalid-request-data" title="Link to this heading">#</a></h5>
+<div class="error dropdown admonition">
+<p class="admonition-title">400, 401, and 500 Responses</p>
+<div class="error dropdown admonition">
+<p class="admonition-title">400 Response: Invalid Request Data</p>
+<section id="example-request">
+<span id="example-request-400"></span><h5><span class="http-method error-response-400 medium">400</span> Example Request:<a class="headerlink" href="#example-request" title="Link to this heading">#</a></h5>
 </section>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">    </span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/credit-decision&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer {{your_api_key}}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">      &quot;account_id&quot;: &quot;10000&quot;,</span>
+<span class="s1">      &quot;order_id&quot;: &quot;32131231231241&quot;,</span>
+<span class="s1">      &quot;customer_ip&quot;: &quot;1.1.1.1&quot;,</span>
+<span class="s1">      &quot;card_holder_name&quot;: &quot;John Doe von Soap&quot;,</span>
+<span class="s1">      &quot;ssn&quot;: &quot;123-45-6789&quot;,  # Invalid SSN format</span>
+<span class="s1">      &quot;dob&quot;: &quot;1979-08-02&quot;,</span>
+<span class="s1">      &quot;card_holder_email&quot;: &quot;email@example.com&quot;</span>
+<span class="s1">    }&#39;</span>
+</pre></div>
+</div>
+<section id="response">
+<span id="example-response-400"></span><h5><span class="http-method error-response-400 medium">400</span> Response<a class="headerlink" href="#response" title="Link to this heading">#</a></h5>
+</section>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid SSN Format&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="caution dropdown admonition">
+<p class="admonition-title">401 Response: Unauthorized Access</p>
+<section id="example-request">
+<span id="example-request-401"></span><h5><span class="http-method error-response-401 medium">401</span> Example Request:<a class="headerlink" href="#example-request" title="Link to this heading">#</a></h5>
+</section>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/credit-decision&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer invalid_api_key&#39;</span><span class="w"> </span><span class="se">\ </span><span class="w"> </span><span class="c1"># Invalid API key</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">      &quot;account_id&quot;: &quot;10000&quot;,</span>
+<span class="s1">      &quot;order_id&quot;: &quot;32131231231241&quot;,</span>
+<span class="s1">      &quot;customer_ip&quot;: &quot;1.1.1.1&quot;,</span>
+<span class="s1">      &quot;card_holder_name&quot;: &quot;John Doe von Soap&quot;,</span>
+<span class="s1">      &quot;ssn&quot;: &quot;123456789&quot;,</span>
+<span class="s1">      &quot;dob&quot;: &quot;1979-08-02&quot;,</span>
+<span class="s1">      &quot;card_holder_email&quot;: &quot;email@example.com&quot;</span>
+<span class="s1">    }&#39;</span>
+</pre></div>
+</div>
 <section id="response-unauthorized-access">
-<h5><span class="http-method error-response-401 medium">401</span> Response: Unauthorized Access<a class="headerlink" href="#response-unauthorized-access" title="Link to this heading">#</a></h5>
+<span id="example-response-401"></span><h5><span class="http-method error-response-401 medium">401</span> Response: Unauthorized Access<a class="headerlink" href="#response-unauthorized-access" title="Link to this heading">#</a></h5>
 </section>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Invalid API key&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="note dropdown admonition">
+<p class="admonition-title">500 Response: Internal Server Error</p>
+<section id="example-request">
+<span id="example-request-500"></span><h5><span class="http-method error-response-500 medium">500</span> Example Request:<a class="headerlink" href="#example-request" title="Link to this heading">#</a></h5>
+</section>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>curl<span class="w"> </span>--silent<span class="w"> </span>--location<span class="w"> </span><span class="s1">&#39;{{baseurl}}/credit-decision&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--header<span class="w"> </span><span class="s1">&#39;Authorization: Bearer {{your_api_key}}&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--data<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">      &quot;account_id&quot;: &quot;10000&quot;,</span>
+<span class="s1">      &quot;order_id&quot;: &quot;32131231231241&quot;,</span>
+<span class="s1">      &quot;customer_ip&quot;: &quot;1.1.1.1&quot;,</span>
+<span class="s1">      &quot;card_holder_name&quot;: &quot;John Doe von Soap&quot;,</span>
+<span class="s1">      &quot;ssn&quot;: &quot;123456789&quot;,</span>
+<span class="s1">      &quot;dob&quot;: &quot;1979-08-02&quot;,</span>
+<span class="s1">      &quot;card_holder_email&quot;: &quot;email@example.com&quot;</span>
+<span class="s1">      // Missing closing brace and malformed JSON</span>
+<span class="s1">    &#39;</span>
+</pre></div>
+</div>
 <section id="response-internal-server-error">
-<h5><span class="http-method error-response-500 medium">500</span> Response: Internal Server Error<a class="headerlink" href="#response-internal-server-error" title="Link to this heading">#</a></h5>
+<span id="example-response-500"></span><h5><span class="http-method error-response-500 medium">500</span> Response: Internal Server Error<a class="headerlink" href="#response-internal-server-error" title="Link to this heading">#</a></h5>
 </section>
-</section>
-<section id="http-responses">
-<h4>HTTP Responses<a class="headerlink" href="#http-responses" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p><span class="http-method error-response-400 medium">400 Response</span> Invalid Request Data</p></li>
-</ul>
-<ul class="simple">
-<li><p><span class="http-method error-response-401 medium">401</span> Unauthorized Access</p></li>
-</ul>
-<ul class="simple">
-<li><p><span class="http-method error-response-500 medium">500</span> Internal Server Error</p></li>
-</ul>
-</section>
-<section id="request-body">
-<h4>Request Body:<a class="headerlink" href="#request-body" title="Link to this heading">#</a></h4>
-</section>
-<section id="id2">
-<h4>Example Request:<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
-<p><strong>content/type:</strong> application/json</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;error&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Internal Server Error&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 </section>
@@ -539,17 +592,11 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#endpoints">Endpoints:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#post-credit-decision"><span class="http-method post">POST</span> /credit-decision</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description:</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#request"><span class="http-method good-response medium">200</span> Request:</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-invalid-request-data"><span class="http-method error-response-400 medium">400</span> Response: Invalid Request Data</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-unauthorized-access"><span class="http-method error-response-401 medium">401</span> Response: Unauthorized Access</a></li>
-<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-internal-server-error"><span class="http-method error-response-500 medium">500</span> Response: Internal Server Error</a></li>
 </ul>
 </li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#http-responses">HTTP Responses</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Request:</a></li>
 </ul>
 </li>
 </ul>

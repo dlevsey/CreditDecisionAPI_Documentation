@@ -31,12 +31,6 @@
 
 ..
 
-- :httpmethod-small-get:`POST` :ref:`Dividend/GenerateDividendDetails <generate-dividend-details>`
-
-..
-
-..
-
 
 ```
 
@@ -147,7 +141,15 @@ Make a credit decision based on customer data.
 ```
 
 
-#### Example Request:
+```{eval-rst}
+
+
+:httpmethod-good-response-medium:`200` Request:
+===============================================
+
+
+```
+
 
 
 ```bash
@@ -172,16 +174,12 @@ Make a credit decision based on customer data.
 :httpmethod-good-response-medium:`200` Response:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
-
 ```
 
 Credit decision was successfully made.
 
 
 ```json
-
-
 {
   "decision": "approved",
   "card_number": "4111111111111111",
@@ -189,79 +187,31 @@ Credit decision was successfully made.
   "card_expire_year": "2028",
   "card_security_code": "000"
 }
-
-
-
-
 ```
 
 
 
-```{eval-rst}
-
-:statuscode-400:`400` Response: Invalid Request Data
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::::::::{admonition} 400, 401, and 500 Responses
+:class: error, dropdown
 
 
+
+```{include} 400.md
+```
+
+
+```{include} 401.md
 ```
 
 
 
-
-```{eval-rst}
-
-:statuscode-401:`401` Response: Unauthorized Access
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+```{include} 500.md
 ```
 
-
-```{eval-rst}
-
-:statuscode-500:`500` Response: Internal Server Error
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-```
-
-#### HTTP Responses
+::::::::
 
 
 
-```{eval-rst}
-
-- :statuscode-400:`400 Response` Invalid Request Data
-
-```
-
-
-```{eval-rst}
-
-- :statuscode-401:`401` Unauthorized Access
-
-
-```
-
-```{eval-rst}
-
-
-- :statuscode-500:`500` Internal Server Error
-
-```
-
-
-
-
-
-####  Request Body:
-
-
-
-
-
-#### Example Request:
-
-
-**content/type:** application/json
 
 
 

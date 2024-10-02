@@ -220,6 +220,18 @@ li.toctree-l2 a .http-method.put {
     display: none;
 }
 
+
+/* Reduce top margin of admonitions */
+.admonition {
+  margin-top: 0 !important;
+}
+
+/* Adjust padding inside the admonition */
+.admonition > .admonition-title {
+  margin-top: 0 !important;
+}
+
+
 .dropdown.expanded .rubric + * {
     display: block;
 }
