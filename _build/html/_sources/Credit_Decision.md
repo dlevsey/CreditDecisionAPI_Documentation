@@ -6,19 +6,17 @@
 # Credit Decision
 
 
+Resource for automating credit approval decisions based on customer data.
 
 
+:::{admonition} Note
+
+Refer to the [Authentication](Authentication.md) section for information on how to authenticate with the API.
+
+:::
 
 
-
-
-
-
-
-## Endpoints:
-
-
-
+### Endpoint(s):
 
 
 
@@ -48,26 +46,10 @@
 ```
 
 
-
-
-
-
-
-
-
-
-
-### Description:
-
-
-Make a credit decision based on customer data.
-
-
-**Description:** This endpoint evaluates customer data to make a credit approval decision.
+This endpoint evaluates customer data to make a credit approval decision.
 
 
 **OperationID:** creditDecision
-
 
 
 #### Query Parameters:

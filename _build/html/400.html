@@ -69,6 +69,9 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script defer="defer" src="https://unpkg.com/@popperjs/core@2"></script>
+    <script defer="defer" src="https://unpkg.com/tippy.js@6"></script>
+    <script defer="defer" src="_static/tippy\400.d918ded9-b700-4e0a-9aea-074484904c5c.js"></script>
     <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = '400';</script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -183,6 +186,7 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Authentication.html">Authentication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Credit_Decision.html">Credit Decision</a></li>
 </ul>
 
@@ -225,6 +229,87 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/dlevsey/CreditDecisionAPI_Documentation.git" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dlevsey/CreditDecisionAPI_Documentation.git/blob/main/source/400.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dlevsey/CreditDecisionAPI_Documentation.git/edit/main/source/400.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/dlevsey/CreditDecisionAPI_Documentation.git/issues/new?title=Issue%20on%20page%20%2F400.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -357,7 +442,7 @@ document.write(`
 <span class="s1">      &quot;order_id&quot;: &quot;32131231231241&quot;,</span>
 <span class="s1">      &quot;customer_ip&quot;: &quot;1.1.1.1&quot;,</span>
 <span class="s1">      &quot;card_holder_name&quot;: &quot;John Doe von Soap&quot;,</span>
-<span class="s1">      &quot;ssn&quot;: &quot;123-45-6789&quot;,  # Invalid SSN format</span>
+<span class="s1">      &quot;ssn&quot;: &quot;123-45-6789&quot;,  // Invalid SSN format</span>
 <span class="s1">      &quot;dob&quot;: &quot;1979-08-02&quot;,</span>
 <span class="s1">      &quot;card_holder_email&quot;: &quot;email@example.com&quot;</span>
 <span class="s1">    }&#39;</span>

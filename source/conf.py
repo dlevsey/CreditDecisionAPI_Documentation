@@ -122,7 +122,8 @@ extensions = [
     'sphinx_copybutton',
     'sphinx_togglebutton',
     'sphinx_tabs.tabs',
-    'sphinx_design'
+    'sphinx_design',
+    'sphinx_tippy'
 ]
 
 todo_include_todos = True
@@ -286,16 +287,17 @@ myst_enable_extensions = [
 ]
 
 
-tml_theme_options = {
-    "repository_url": "https://github.com/levseyd01/SOLO_Review",
+html_theme_options = {
+    "repository_url": "https://github.com/dlevsey/CreditDecisionAPI_Documentation.git",
     "use_source_button": True,
     "use_edit_page_button": True,
     "path_to_docs": "source",
-    "repository_branch": "dev",
+    "repository_branch": "main",
     "use_repository_button": True,
     "use_issues_button": True,
     "collapse_navbar": False,
-    "use_download_button": True
+    "use_download_button": True,
+    "toc_depth": 1
 }
 
 
