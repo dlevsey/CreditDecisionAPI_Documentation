@@ -117,7 +117,6 @@ extensions = [
     'myst_parser',
     'sphinx.ext.todo',
     'sphinx.builders.linkcheck',
-    'sphinxcontrib.httpdomain',
     'hoverxref.extension',
     'sphinx_copybutton',
     'sphinx_togglebutton',
