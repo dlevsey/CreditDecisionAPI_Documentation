@@ -105,6 +105,9 @@ myst_roles = [
     "medium-titles",
     "httpmethod-good-response-medium",
     "scenario",
+    "statuscode-400",
+    "statuscode-401",
+    "statuscode-500"
 ]
 
 extensions = [
@@ -191,6 +194,23 @@ def scenario(name, rawtext, text, lineno, inliner, options={}, content=[]):
     node = nodes.inline(rawtext, text, classes=["scenario"])
     return [node], []
 
+def statuscode_400_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    node = nodes.inline(
+        rawtext,       # Corrected parameter
+        text,
+        classes=["http-method", "error-response-400", "medium"]
+    )
+    return [node], []
+
+def statuscode_401_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    node = nodes.inline(rawtext, text, classes=["http-method", "error-response-401", "medium"])
+    return [node], []
+
+def statuscode_500_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    node = nodes.inline(rawtext, text, classes=["http-method", "error-response-500", "medium"])
+    return [node], []
+
+
 roles.register_local_role("httpmethod-small-get", httpmethod_get_small_role)
 roles.register_local_role("httpmethod-small-post", httpmethod_post_small_role)
 roles.register_local_role("httpmethod-small-put", httpmethod_put_small_role)
@@ -207,14 +227,17 @@ roles.register_local_role("medium-titles", medium_titles)
 roles.register_local_role("httpmethod-good-response-medium", httpmethod_good_response_medium_role)  
 roles.register_local_role("scenario", scenario)
 
-def generate_parameter_html(name, type, requirement, description):
-    template = jinja_env.get_template('parameter_template.html')
-    return template.render(
-        parameter_name=name,
-        parameter_type=type,
-        requirement_status=requirement,
-        parameter_description=description
-    )
+
+
+
+#def generate_parameter_html(name, type, requirement, description):
+   # template = jinja_env.get_template('parameter_template.html')
+ #   return template.render(
+   #     parameter_name=name,
+   #     parameter_type=type,
+    #    requirement_status=requirement,
+  #  #    parameter_description=description
+  #  )
 
 # Add these lines to specify the source file type and encoding
 source_suffix = '.rst'
@@ -294,4 +317,7 @@ def setup(app):
     app.add_role("medium-titles", medium_titles)
     app.add_role("httpmethod-good-response-medium", httpmethod_good_response_medium_role)
     app.add_role("scenario", scenario)
-   
+
+    app.add_role('statuscode-400', statuscode_400_role)
+    app.add_role('statuscode-401', statuscode_401_role)
+    app.add_role('statuscode-500', statuscode_500_role)

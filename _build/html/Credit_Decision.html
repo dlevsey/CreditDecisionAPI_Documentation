@@ -42,7 +42,7 @@
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/_static/my_custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css?v=a5c4661c" />
-    <link rel="stylesheet" type="text/css" href="_static/my_custom.css?v=0c271358" />
+    <link rel="stylesheet" type="text/css" href="_static/my_custom.css?v=d5e4bed0" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
@@ -335,8 +335,12 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-invalid-request-data"><span class="http-method error-response-400 medium">400</span> Response: Invalid Request Data</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-unauthorized-access"><span class="http-method error-response-401 medium">401</span> Response: Unauthorized Access</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-internal-server-error"><span class="http-method error-response-500 medium">500</span> Response: Internal Server Error</a></li>
 </ul>
 </li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#http-responses">HTTP Responses</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Request:</a></li>
 </ul>
@@ -453,6 +457,37 @@ document.write(`
 <section id="response">
 <h5><span class="http-method good-response medium">200</span> Response:<a class="headerlink" href="#response" title="Link to this heading">#</a></h5>
 </section>
+<p>Credit decision was successfully made.</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;decision&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;approved&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;card_number&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4111111111111111&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;card_expire_month&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;card_expire_year&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2028&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;card_security_code&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;000&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="response-invalid-request-data">
+<h5><span class="http-method error-response-400 medium">400</span> Response: Invalid Request Data<a class="headerlink" href="#response-invalid-request-data" title="Link to this heading">#</a></h5>
+</section>
+<section id="response-unauthorized-access">
+<h5><span class="http-method error-response-401 medium">401</span> Response: Unauthorized Access<a class="headerlink" href="#response-unauthorized-access" title="Link to this heading">#</a></h5>
+</section>
+<section id="response-internal-server-error">
+<h5><span class="http-method error-response-500 medium">500</span> Response: Internal Server Error<a class="headerlink" href="#response-internal-server-error" title="Link to this heading">#</a></h5>
+</section>
+</section>
+<section id="http-responses">
+<h4>HTTP Responses<a class="headerlink" href="#http-responses" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><span class="http-method error-response-400 medium">400 Response</span> Invalid Request Data</p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method error-response-401 medium">401</span> Unauthorized Access</p></li>
+</ul>
+<ul class="simple">
+<li><p><span class="http-method error-response-500 medium">500</span> Internal Server Error</p></li>
+</ul>
 </section>
 <section id="request-body">
 <h4>Request Body:<a class="headerlink" href="#request-body" title="Link to this heading">#</a></h4>
@@ -507,8 +542,12 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#query-parameters">Query Parameters:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#example-request">Example Request:</a><ul class="nav section-nav flex-column">
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response"><span class="http-method good-response medium">200</span> Response:</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-invalid-request-data"><span class="http-method error-response-400 medium">400</span> Response: Invalid Request Data</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-unauthorized-access"><span class="http-method error-response-401 medium">401</span> Response: Unauthorized Access</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#response-internal-server-error"><span class="http-method error-response-500 medium">500</span> Response: Internal Server Error</a></li>
 </ul>
 </li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#http-responses">HTTP Responses</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#request-body">Request Body:</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Example Request:</a></li>
 </ul>

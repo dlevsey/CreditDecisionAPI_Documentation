@@ -57,6 +57,12 @@
 
 
 
+
+
+
+
+
+
 ### Description:
 
 
@@ -141,7 +147,6 @@ Make a credit decision based on customer data.
 ```
 
 
-
 #### Example Request:
 
 
@@ -161,13 +166,92 @@ Make a credit decision based on customer data.
   }'
 ```
 
+
 ```{eval-rst}
 
 :httpmethod-good-response-medium:`200` Response:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
+
 ```
+
+Credit decision was successfully made.
+
+
+```json
+
+
+{
+  "decision": "approved",
+  "card_number": "4111111111111111",
+  "card_expire_month": "12",
+  "card_expire_year": "2028",
+  "card_security_code": "000"
+}
+
+
+
+
+```
+
+
+
+```{eval-rst}
+
+:statuscode-400:`400` Response: Invalid Request Data
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+```
+
+
+
+
+```{eval-rst}
+
+:statuscode-401:`401` Response: Unauthorized Access
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+```
+
+
+```{eval-rst}
+
+:statuscode-500:`500` Response: Internal Server Error
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+```
+
+#### HTTP Responses
+
+
+
+```{eval-rst}
+
+- :statuscode-400:`400 Response` Invalid Request Data
+
+```
+
+
+```{eval-rst}
+
+- :statuscode-401:`401` Unauthorized Access
+
+
+```
+
+```{eval-rst}
+
+
+- :statuscode-500:`500` Internal Server Error
+
+```
+
+
+
+
+
 ####  Request Body:
 
 
