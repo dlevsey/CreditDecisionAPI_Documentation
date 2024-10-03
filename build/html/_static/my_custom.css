@@ -1,0 +1,237 @@
+/* Base style for HTTP methods */
+.http-method {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    padding: 2px 5px;
+    border-radius: 5px; /* Rounds the edges */
+    border: 1px solid black;
+}
+
+/* Styles for specific HTTP methods */
+.http-method.get {
+    background-color: rgb(230, 255, 230);
+    border-color: darkgreen;
+}
+
+.http-method.post {
+    background-color: rgb(235, 247, 255);
+    border-color: rgb(127, 168, 255);
+}
+
+.http-method.put {
+    background-color: rgb(255, 255, 172);
+    color: black; /* For readability */
+    border-color: gold;
+}
+
+/* Size variations */
+.http-method.small {
+    font-size: 12px;
+}
+
+.http-method.medium {
+    font-size: 20px;
+}
+
+.http-method.post.medium {
+    font-size: 17px;
+}
+
+/* Styles for responses */
+.http-method.good-response.medium {
+    font-size: 1.5rem;
+    background-color: rgb(230, 255, 230);
+    border-style: none;
+}
+
+.http-method.error-response-400.medium {
+    font-size: 1.5rem;
+    background-color: rgb(255, 230, 230); /* Light red background */
+    border-style: none;
+}
+
+.http-method.error-response-401.medium {
+    font-size: 1.5rem;
+    background-color: rgb(255, 243, 205); /* Light yellow background */
+    border-style: none;
+}
+
+.http-method.error-response-500.medium {
+    font-size: 1.5rem;
+    background-color: rgb(230, 230, 255); /* Light blue background */
+    border-style: none;
+}
+
+/* Scenario Styles */
+.scenario {
+    color: black;
+    font-weight: bold;
+}
+
+/* Title Styles */
+.smaller-titles {
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 1rem;
+}
+
+.medium-titles {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+/* Parameter Styles */
+.parameter-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.8rem;
+}
+
+.parameter-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.parameter-type {
+    font-weight: lighter;
+    font-size: 0.9rem;
+    padding-left: 2rem;
+}
+
+.name-and-requirement {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.1rem;
+}
+
+.parameter-requirement-required-font,
+.parameter-requirement-optional-font {
+    padding-left: 2rem;
+    font-weight: lighter;
+}
+
+.parameter-requirement-required-font {
+    color: red;
+}
+
+.parameter-requirement-optional-font {
+    color: rgb(20, 145, 228);
+}
+
+.parameter-description {
+    padding-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+}
+
+.parameter-bottom-bar {
+    border-top: 2px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+/* Possibility Parameter Values */
+.poss-param-values {
+    background-color: #d3d3d3 !important;
+    font-size: 0.9rem;
+    font-weight: lighter;
+    padding-left: 0.5rem;
+    color: #000;
+}
+
+/* Child Attribute */
+.child-attribute {
+    font-weight: bolder;
+    font-size: 1.2rem;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    background-color: #ececec;
+}
+
+/* Table Styles */
+table {
+    min-width: 125%;
+    table-layout: fixed;
+}
+
+/* Exclude styles from the navigation bar */
+.toctree-l2 .http-method,
+.toctree-l2 .medium-titles,
+.toctree-l2 .smaller-titles,
+.toctree-l2 .httpmethod-small-get {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* Clear styles for HTTP methods in the table of contents */
+li.toctree-l2 a .http-method.get,
+li.toctree-l2 a .http-method.post,
+li.toctree-l2 a .http-method.put {
+    background-color: initial !important;
+    border: none !important;
+    color: initial !important;
+    font-weight: initial !important;
+    padding: initial !important;
+    font-size: inherit !important;
+    border-radius: initial !important;
+}
+
+/* Reference Link Styles */
+.reference.internal.nav-link {
+    font-size: inherit;
+    background-color: transparent;
+}
+
+.reference.internal.nav-link .http-method.good-response.medium,
+.reference.internal.nav-link .http-method.error-response-400.medium,
+.reference.internal.nav-link .http-method.error-response-401.medium,
+.reference.internal.nav-link .http-method.error-response-500.medium {
+    color: #000000;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: inherit;
+}
+
+/* Highlight Code Blocks */
+.highlight pre {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px;
+}
+
+/* Other Styles */
+.red-text {
+    color: red;
+}
+
+.blue-text {
+    color: rgb(0, 81, 255);
+}
+
+.dropdown .rubric {
+    cursor: pointer;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.dropdown .rubric + * {
+    display: none;
+}
+
+
+/* Reduce top margin of admonitions */
+.admonition {
+  margin-top: 0 !important;
+}
+
+/* Adjust padding inside the admonition */
+.admonition > .admonition-title {
+  margin-top: 0 !important;
+}
+
+
+.dropdown.expanded .rubric + * {
+    display: block;
+}

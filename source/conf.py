@@ -9,7 +9,7 @@
 project = 'CreditDecisionAPI'
 version = '1.0'
 copyright = '2024, '
-author = 'Dylan Levsey'
+author = 'Mackerel'
 release = '1'
 import os
 import sys

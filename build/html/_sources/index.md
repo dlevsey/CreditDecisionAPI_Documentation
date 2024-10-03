@@ -12,6 +12,19 @@ This API automates the decision-making process for credit approval based on cust
 
 
 
+
+#### API Resource(s) and Endpoint(s)
+
+```{toctree}
+
+:maxdepth: 0
+Credit_Decision.md
+
+
+```
+
+
+
 #### Authentication
 
 ```{toctree}
@@ -23,15 +36,6 @@ Authentication.md
 ```
 
 
-#### API Resource(s) and Endpoint(s)
-
-```{toctree}
-
-:maxdepth: 0
-Credit_Decision.md
-
-
-```
 
 
 

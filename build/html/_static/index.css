@@ -1,0 +1,267 @@
+/* This file intentionally left blank. */
+.http-method {
+    font-weight: bold;
+    
+    color: rgb(0, 0, 0);
+    padding: 2px 5px;
+    border-radius: 5px; /* This will round the edges */
+    border: 1px solid
+    
+
+}
+
+
+.body-content  {
+    font-family: Georgia, serif;
+    font-size: 17px;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.highlight pre {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 500px; 
+}
+
+.medium-titles {
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+
+.parameters-container {
+    margin-top: 1.2rem;
+}
+.parameter-type {
+    font-weight: lighter;
+    
+    font-size: 0.9rem;
+   
+    padding-left:2rem;
+}
+.parameter-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom:0.8rem;
+   
+    
+}
+.parameter-name {
+
+    font-weight: bold;
+    font-size: 1.1rem;
+    
+
+}
+.name-and-requirement {
+    display: flex;
+    align-items: center;
+    padding-bottom:1.1rem;
+   
+}
+
+.parameter-requirement-required-font, .parameter-requirement-optional-font {
+   /* Add some spacing between the label and the parameter name */
+    padding-left: 2rem;
+}
+
+
+
+
+.parameter-requirement-required-font {
+    color: red;
+    font-weight: lighter;
+}
+
+.parameter-requirement-optional-font {
+    color: rgb(20, 145, 228);
+    font-weight: lighter;
+}
+
+.parameter-initial-bar {
+    border-top: 2px solid #ccc;
+    padding-bottom:1rem;
+}
+
+
+
+.parameter-bottom-bar {
+    border-top: 2px solid #ccc;
+    padding-bottom:1rem;
+}
+
+.parameter-description {
+    padding-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    
+}
+
+
+.parameter-description-next-line {
+    padding-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-family: Arial;
+    line-height:2.5;
+}
+
+.parameter-description .parameter-small-names {
+    font-size: medium;
+    font-weight: bold;
+    color: #acacac;
+}
+.dropdown .rubric {
+    cursor: pointer;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+.dropdown .rubric + * {
+    display: none;
+}
+
+.dropdown.expanded .rubric + * {
+    display: block;
+}
+
+
+.smaller-titles {
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom:1rem;
+}
+
+
+.red-text {
+    color: red;
+}
+.blue-text {
+    color: rgb(0, 81, 255);
+}
+table {
+    min-width: 125%;
+
+    table-layout: fixed;
+    
+
+    
+}
+
+.toctree-l2 .medium-titles {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+.toctree-l2 .smaller-titles {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.http-method.good-response.medium {
+    font-size: 1.5rem;
+    background-color: rgb(230, 255, 230);
+    border-style: none;
+}
+
+.child-attribute {
+    font-weight: bolder;
+    font-size:1.2rem;
+    padding: 2px 5px;
+    border-radius: 5px;
+    border: 0.5px solid;
+    background-color: #ececec;
+  
+
+}
+
+
+.poss-param-values {
+    
+    font-size:1rem;
+    padding: 2px 5px;
+    border-radius: 5px;
+   
+    background-color: #ececec;
+  
+
+}
+.http-method.get {
+    background-color: rgb(230, 255, 230);
+    border-color: darkgreen;
+}
+
+.http-method.get.small {
+    font-size: 12px; /* Set the font size */
+    background-color: rgb(230, 255, 230);
+    border-color: rgb(21, 157, 21);
+}
+
+.http-method.get.medium {
+    font-size: 20px; /* Set the font size */
+    background-color: rgb(230, 255, 230);
+    border-color: darkgreen;
+}
+
+.http-method.post {
+    background-color: rgb(235, 247, 255);
+    border-color: rgb(127, 168, 255);
+  }
+
+
+
+.http-method.post.small {
+    font-size: 12px; /* Set the font size */
+    background-color: rgb(235, 247, 255);
+    border-color: rgb(127, 168, 255);
+   
+}
+
+.scenario {
+   color: rgb(0, 0, 0);
+   font-weight: bold;
+       
+}
+.http-method.post.medium {
+    font-size: 17px; /* Set the font size */
+    background-color: rgb(235, 247, 255);
+    border-color: rgb(127, 168, 255);
+}
+
+.http-method.put {
+    background-color: rgb(255, 255, 172);
+    color: black; /* Changing text color to black for better readability on yellow background */
+    border-color: gold;
+}
+
+.http-method.put.small {
+
+    font-size: 12px;
+    background-color: rgb(255, 255, 172);
+    color: black; /* Changing text color to black for better readability on yellow background */
+    border-color: gold;
+}
+
+.http-method.put.medium {
+
+    font-size: 20px;
+    background-color: rgb(255, 255, 172);
+    color: black; /* Changing text color to black for better readability on yellow background */
+    border-color: gold;
+}
+
+/* Clear styles for GET, POST, PUT methods in the table of contents */
+li.toctree-l2 a .http-method.get,
+li.toctree-l2 a .http-method.post,
+li.toctree-l2 a .http-method.put {
+    background-color: initial !important;
+    border: none !important;
+    color: initial !important;
+    font-weight: initial !important;
+    padding: initial !important;
+    border-radius: initial !important;
+}
